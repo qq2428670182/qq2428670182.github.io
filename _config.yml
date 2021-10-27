@@ -38,7 +38,7 @@ nightMode: true
 # Comments 评论功能
 comments:
   disqus: true
-  disqus_url: 'https://www.baidu.com'
+  disqus_url: 'https://qq2428670182-github-io.disqus.com/count.js'
 
 # MathJax 公式支持 by Ray-Eldath
 mathjax: true
