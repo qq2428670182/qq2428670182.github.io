@@ -2,7 +2,7 @@
 title: 'Futari的独立博客'
 description: '千禧一代，后端开发者/爬虫，热爱技术&设计。很高兴能在这里与你分享我对技术和生活的思考。'
 keyword: '孙福豪, 孙福豪的独立博客, 孙福豪的博客, 后端, 后端开发, 前端博客, javascript, vuejs, nodejs, 设计'
-url: '' # your host
+url: 'http://qq2428670182.github.io' # your host
 
 # when build blog on server, if you don't need baseurl, you should leave this value blank.
 # 在服务器上建站时，如果你不需要子域名，请将这一格留空
