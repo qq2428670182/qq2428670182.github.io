@@ -39,6 +39,7 @@ nightMode: true
 comments:
   disqus: true
   disqus_url: 'https://qq2428670182-github-io.disqus.com/count.js'
+  disqus_shortname: qq2428670182-github-io
 
 # MathJax 公式支持 by Ray-Eldath
 mathjax: true
