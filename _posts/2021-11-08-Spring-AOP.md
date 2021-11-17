@@ -1,3 +1,12 @@
+---
+layout: post
+title: 'Java IO流笔记'
+date: 2021-11-08
+author: Futari
+cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-banner.png'
+tags: Java Spring
+---
+
 ### AOP（面向切面编程）
 
 ## 1.动态代理
