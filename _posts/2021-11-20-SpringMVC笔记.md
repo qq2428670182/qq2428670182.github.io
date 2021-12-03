@@ -58,9 +58,18 @@ protected void doDispatch(request,response){
 框架的视图解析器可以帮助程序员设置视图文件的路径，在类上加注解来区分不同的模块，不同的模块下有不同的视图文件。在简化的路径下就不能写全路径访问了
 因为要简写路径，所以有前缀和后缀（扩展名）设置，声明的是视图解析器对象，使用bean和property设置
 
+不加模块，那么Controller的请求默认是/（根目录）开始
 
 关于@RequesuMapping：
-放在类的上面：是所有请求的公共部分，叫做模块名称，在方法上的RequestMapping控制的是属于该模块的具体的请求，RequestMapping的属性是value
+放在类的上面：是所有请求的公共部分，叫做模块名称，在方法上的RequestMapping控制的是属于该模块的具体的请求，RequestMapping的属性是value和method
+
+> 属性：
+>
+> value：指定请求的名称，/开头
+>
+> method：指定请求的方式，它的值RequestMethod类的枚举值
+>
+> 例如表示get请求的RequestMethod.GET
 
 
 
