@@ -40,6 +40,7 @@ a {
   cursor: pointer;
   transition: .2s; }
 
+
 ::selection {
   background-color: rgba(0, 147, 254, 0.2); }
 
