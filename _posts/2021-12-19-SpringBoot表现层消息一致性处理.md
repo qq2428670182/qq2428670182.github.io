@@ -28,3 +28,26 @@ public class R{
 
 ```
 
+将Controller中所有的mapping方法返回值统一使用自定义的R类，返回R对象
+
+统一后的Controller如下所示：
+
+~~~ java
+    @PostMapping
+    public R save(@RequestBody Book book){
+        return new R(bookService.save(book));
+    }
+    @PutMapping
+    public R update(@RequestBody Book book){
+        return new R(bookService.modify(book));
+    }
+    @DeleteMapping("{id}")
+    public R delete(@PathVariable Integer id){
+        return new R(bookService.delete(id));
+    }
+    @GetMapping("{id}")//主路径是books，下级目录为{id}，即http://localhost:8080/books/{id},默认取下级目录的值作为id传入路径变量中
+    public R getById(@PathVariable Integer id){
+        return new R(true,bookService.getById(id));
+    }
+~~~
+
