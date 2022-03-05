@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'SpringBoot实现定时任务'
-date: 2021-03-02
+date: 2022-03-02
 author: Futari
 cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-banner.png'
 tags: Spring quarrz task

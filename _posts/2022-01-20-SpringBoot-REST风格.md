@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'SpringBoot RESTful风格'
-date: 2021-01-20
+date: 2022-01-20
 author: Futari
 cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-banner.png'
 tags: SpringBoot RESTFUL

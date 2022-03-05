@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'SpringBoot-整合Jetcache，j2cache'
-date: 2021-02-25
+date: 2022-02-25
 author: Futari
 cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-banner.png'
 tags: SpringBoot 

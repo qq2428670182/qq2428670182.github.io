@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '简单实现ActiveMQ、RabbitMQ'
-date: 2021-03-07
+date: 2022-03-07
 author: Futari
 cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-banner.png'
 tags: Spring RabbitMQ
