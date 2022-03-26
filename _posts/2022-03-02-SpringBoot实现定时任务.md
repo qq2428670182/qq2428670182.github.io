@@ -7,7 +7,8 @@ cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-banner.png'
 tags: Spring quarrz task
 ---
 
-#### 整合quartz：
+#### 两种方式实现SpringBoot定时任务
+##### 整合quartz：
 
 首先使用util包下自带的Timmer类
 

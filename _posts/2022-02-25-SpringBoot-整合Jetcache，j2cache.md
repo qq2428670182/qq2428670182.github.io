@@ -7,7 +7,7 @@ cover: 'http://on2171g4d.bkt.clouddn.com/jekyll-banner.png'
 tags: SpringBoot 
 ---
 
-## Springboot 整合三方
+## Springboot 整合三方（Jetcache，j2cache）的具体演示
 
 #### 缓存：提高永久存储介质的读取效率，并且提供临时的数据存储空间
 
