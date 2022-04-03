@@ -56,15 +56,19 @@ Nginx 使用默认负载均衡策略（轮询），请求将会按照时间顺�
 
 ##### RabbitMQ四种交换机（六种模式）：
 
+生成一个Binding对象，采用哪种模式需要哪些就绑定哪些（quene，exchange等等）
+
 simple简单模式：work quene，一个生产者对应多个消费者，但是一个消息只能有一个消费者
 
 Fanout:广播模式也叫订阅者发布者模式，直接指定队列和交换机，不需要routingkey（路由键）
 
-Direct：直连模式也叫rouing路由模式，在基本模式上加上routingkey来指定具体进入哪一个队列，queue由它对应的路由键
+Direct：直连模式也叫rouing路由模式，在基本模式上加上routingkey来指定消息具体进入哪一个队列，queue由它的路由键来对应消息携带的路由key
 
-Topic:主题模式
+Topic:主题模式，在路由key很多的情况下难以管理，所以在路由模式的基础上加入了通配符，通配符*代表以一个单词，#代表多个0个或多个单词（任意个）
 
 Headers(用的少):头部交换机
 
 RPC模式
+
+在comfig中配置需要用的参数（queneName、交换机exchange、routingkey通配符策略等等）
 
