@@ -2,10 +2,11 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+
 # Site
-title: Your Title
-subtitle: This is hexo theme
-author: Your Name
+title: Live My Life
+subtitle: 淡而无味也是一种味道
+author: Mr.Vincent
 timezone:
 
 # Internationalization (i18n) Setting
@@ -380,5 +381,6 @@ gitter:
 ##
 deploy:
   type: git
-  repo: https://github.com/<yourAccount>/<repo> # or https://gitee.com/<yourAccount>/<repo>
+  repo: https://github.com/qq2428670182/qq2428670182.github.io
+ # or https://gitee.com/<yourAccount>/<repo>
   branch: <your-branch>
