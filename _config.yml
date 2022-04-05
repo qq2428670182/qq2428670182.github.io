@@ -11,13 +11,15 @@ timezone:
 
 # Internationalization (i18n) Setting
 language: # At present, only en、cn and tw are supported. You can customize the language，refer to `languages/en.yml`.
-  - en
   - cn
+  - en
+
 langselect:
   enable: true # If open, it will automatically generation lang-select button.This button can jump in articles in different languages, but the articles must have the same name.
   options: # langselect button display options
-    en: English
     cn: 简体中文
+    en: English
+    
     # tw: 正體中文
 
 
@@ -40,10 +42,10 @@ permalink_defaults:
 # Custom Setting Start
 
 # Site settings
-SEOTitle: either thin | or die
-email: hexo-theme-livemylife@gmail.com
+SEOTitle: 一如Java深似海
+email: fzhang086@gmail.com
 description: "It's an IT blog..."
-keyword: "v-vincen,v-vincen,livemylife,IT  blog,Blog"
+keyword: "java,Futari,livemylife,IT  blog,Blog"
 header-img: img/header_img/newhome_bg.jpg
 archives-img: img/header_img/archive_bg2.jpg
 
@@ -63,13 +65,13 @@ wave: true
 
 # SNS Settings
 # RSS: true
-github_username: V-Vincen
-twitter_username: V_Vincen_
-instagram_username: v_vincen_
-# facebook_username:  yourAccount
-# linkedin_username:  yourAccount
-# zhihu_username: WVincen
-weibo_username: WVincen
+github_username: qq2428670182
+twitter_username: qq2428670182
+instagram_username: qq2428670182
+# facebook_username:  qq2428670182
+# linkedin_username:  qq2428670182
+# zhihu_username: qq2428670182
+weibo_username: qq2428670182
 
 
 # Sidebar Settings
@@ -98,8 +100,8 @@ featured-condition-size: 0    # A tag will be featured if the size of it is more
 ## Friends
 friends: [
     {
-        title: "V_Vincen",
-        href: "https://v-vincen.life/"
+        title: "Futari",
+        href: "https://qq2428670182.github.io/"
     },{
         title: "Bean Tech",
         href: "http://beantech.org"
