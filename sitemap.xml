@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://qq2428670182.github.io/404.html</loc>
+    
+    <lastmod>2022-04-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://qq2428670182.github.io/tags/index.html</loc>
     
     <lastmod>2022-04-05</lastmod>
@@ -12,27 +19,6 @@
     <loc>https://qq2428670182.github.io/categories/index.html</loc>
     
     <lastmod>2022-04-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://qq2428670182.github.io/404.html</loc>
-    
-    <lastmod>2022-04-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://qq2428670182.github.io/cn/Hexo-Theme-LiveMyLife/</loc>
-    
-    <lastmod>2020-04-16</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://qq2428670182.github.io/en/Hexo-Theme-LiveMyLife/</loc>
-    
-    <lastmod>2020-04-16</lastmod>
     
   </url>
   
@@ -59,20 +45,6 @@
   </url>
 
   
-  <url>
-    <loc>https://qq2428670182.github.io/tags/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2022-04-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://qq2428670182.github.io/categories/Hexo-Theme-LiveMyLife/</loc>
-    <lastmod>2022-04-05</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
 </urlset>
