@@ -23,7 +23,7 @@ langselect:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite-url      # Note: don't forget to modify the CNAME file to your url
+url: http://qq2428670182.github.io      # Note: don't forget to modify the CNAME file to your url
 root: /
 permalink: :lang/:title/
 permalink_defaults:
@@ -382,5 +382,5 @@ gitter:
 deploy:
   type: git
 ##  repo: https://github.com/qq2428670182/qq2428670182.github.io
-  repository: git@github.com:qq2428670182/qq2428670182.github.io.git
+  repo: git@github.com:qq2428670182/qq2428670182.github.io.git
   branch: master
