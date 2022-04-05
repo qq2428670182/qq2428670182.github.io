@@ -381,6 +381,5 @@ gitter:
 ##
 deploy:
   type: git
-  repo: https://github.com/qq2428670182/qq2428670182.github.io
- # or https://gitee.com/<yourAccount>/<repo>
-  branch: <your-branch>
+  repo: https://github.com/qq2428670182/qq2428670182.github.io.git
+  branch: master
