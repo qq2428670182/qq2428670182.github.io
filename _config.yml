@@ -383,4 +383,4 @@ deploy:
   type: git
 ##  repo: https://github.com/qq2428670182/qq2428670182.github.io
   repo: git@github.com:qq2428670182/qq2428670182.github.io.git
-  branch: master
+  branch: main
