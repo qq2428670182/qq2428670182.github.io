@@ -487,6 +487,10 @@
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/cn/关于JVM/" data-toggle="tooltip" data-placement="top" title="关于JVM">&larr; Previous Post</a>
+          </li>
+          
           
           <li class="next">
             <a href="/cn/2022-03-07-简单实现ActiveMQ、RabbitMQ/" data-toggle="tooltip" data-placement="top" title="简单实现ActiveMQ、RabbitMQ">Next Post &rarr;</a>
@@ -1236,5 +1240,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

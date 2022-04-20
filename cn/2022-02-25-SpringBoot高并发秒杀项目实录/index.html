@@ -404,11 +404,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">4</span> Minutes
+              Estimated Reading Time <span class="post-count">5</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.2k</span> In Total
+              Words <span class="post-count">1.6k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -470,7 +470,7 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <p>实现高性能、一致性、高可用    </p>
+        <p>实现高性能、一致性、高可用</p>
 <p>前端进行一次md5加密，传输过程中再进行一次加密，提高安全程度</p>
 <p>利用逆向工程由数据库表和模板来生成对应的实体类、接口、实现类等等，需要的保留，不需要的在后续中删除</p>
 <p>开发登陆功能是为了为后续的秒杀功能提供鉴权，只有用户才能进行秒杀</p>
@@ -478,17 +478,20 @@
 <p>Nginx 使用默认负载均衡策略（轮询），请求将会按照时间顺序逐一分发到后端应用上。</p>
 <p>所以需要解决分布式Session问题（多个Tomcat用SpringSession或redis实现session的同步）</p>
 <p>不再使用多个tomcat去存储session，而是使用一个独立的redis存储</p>
-<h4 id="秒杀相关问题"><a href="#秒杀相关问题" class="headerlink" title="秒杀相关问题"></a>秒杀相关问题</h4><p>页面缓存：并发的问题主要存在于数据库，所以要尽量减少对数据库的访问，所以可以加缓存，除了页面缓存之外，还有对象缓存、URl缓存等等</p>
+<h4 id="秒杀相关问题">秒杀相关问题</h4>
+<p>页面缓存：并发的问题主要存在于数据库，所以要尽量减少对数据库的访问，所以可以加缓存，除了页面缓存之外，还有对象缓存、URl缓存等等</p>
 <p>页面不需要系统整个的来生成页面同时整个页面地传输，减少流量，改为从缓存中取html取页面，取不到页面（缓存过时间失效了）的话就在后端执行生成并保存到redis，一般对缓存设置一个失效时间，因为缓存也不是一直能用的，除非数据根本不会变，那样推荐直接页面静态化，URL静态化是指多页面情况下，比如通过id来确定访问某一个id的页面。一般适用于更改数据比较频繁的页面，所以失效时间不能太长。</p>
 <p>页面静态化：通过直接访问纯HTml来减少对服务器的请求以及减少数据在网络中的传输，比如动态页面优化后，改用vue或其他的方式只传输页面中需要变化的数据部分，来实现前后端分离，这样还不能说是完全的页面静态化，完全的使用html才是页面静态化，一般静态化应用于更改很少的页面，当改变数据时的同时调用静态化。</p>
-<h5 id="秒杀存在的问题：超卖问题，一个用户在高并发请求下多次秒杀，库存减少数和订单生成数不一致"><a href="#秒杀存在的问题：超卖问题，一个用户在高并发请求下多次秒杀，库存减少数和订单生成数不一致" class="headerlink" title="秒杀存在的问题：超卖问题，一个用户在高并发请求下多次秒杀，库存减少数和订单生成数不一致"></a>秒杀存在的问题：超卖问题，一个用户在高并发请求下多次秒杀，库存减少数和订单生成数不一致</h5><p>解决方法：</p>
+<h5 id="秒杀存在的问题：超卖问题，一个用户在高并发请求下多次秒杀，库存减少数和订单生成数不一致">秒杀存在的问题：超卖问题，一个用户在高并发请求下多次秒杀，库存减少数和订单生成数不一致</h5>
+<p>解决方法：</p>
 <p>超卖：在减少库存的sql语句上同时判断库存是否为0，如果为0不满足sql条件，所以减库存sql不能被执行</p>
 <p>库存减少数和订单生成数不一致：库存减少语句生成boolean值，true才能生成一条order</p>
 <p>一个用户在高并发请求下多次秒杀：数据库表添加索引，就是分表，秒杀的订单和正常的订单是两张表，在数据库中建立用户id和商品id的唯一索引，防止用户插入重复的记录。</p>
 <p>每次插入的时候，索引不能重复就不能插入，因为写了事务的注解 就会回滚。</p>
 <p>还可以将订单插入到缓存中。</p>
 <p>将数据库访问加入到redis中，继续优化：也并不是将所有请求都交给redis，而是设置队列依次执行，在用户端提供一个队列等待的友好提示，用队列解决高并发的问题</p>
-<h5 id="RabbitMQ四种交换机（六种模式）："><a href="#RabbitMQ四种交换机（六种模式）：" class="headerlink" title="RabbitMQ四种交换机（六种模式）："></a>RabbitMQ四种交换机（六种模式）：</h5><p>生成一个Binding对象，采用哪种模式需要哪些就绑定哪些（quene，exchange等等）</p>
+<h5 id="RabbitMQ四种交换机（六种模式）：">RabbitMQ四种交换机（六种模式）：</h5>
+<p>生成一个Binding对象，采用哪种模式需要哪些就绑定哪些（quene，exchange等等）</p>
 <p>simple简单模式：work quene，一个生产者对应多个消费者，但是一个消息只能有一个消费者</p>
 <p>Fanout:广播模式也叫订阅者发布者模式，直接指定队列和交换机，不需要routingkey（路由键）</p>
 <p>Direct：直连模式也叫rouing路由模式，在基本模式上加上routingkey来指定消息具体进入哪一个队列，queue由它的路由键来对应消息携带的路由key</p>
@@ -496,6 +499,15 @@
 <p>Headers(用的少):头部交换机</p>
 <p>RPC模式</p>
 <p>在comfig中配置需要用的参数（queneName、交换机exchange、routingkey通配符策略等等）</p>
+<p>JUC并发问题：</p>
+<p>voliate：保证了可见性和有序性</p>
+<p>涉及到指令重排问题，指令重排是CPU为了提高任务执行的速度，提高CPU的吞吐率而采用的一种流水线导致的，程序语句之间可能会发生重排（概率很低），重排在某些情况下会产生错误，比如在多线程的情况下执行对共享资源的操作，如果下面不会出错</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> y = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>但是下面可能出错,即有可能下面的语句先执行，但是上面的i还没赋值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> y = i+<span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>所以关于指令重排的禁用就可以使用voliate，在共享变量声明时前面加上，以后每一次操作该变量都会按voliate规则:</p>
+<p>对voliate变量的写指令后会加入写屏障，导致该语句和前面的所有语句都在写屏障中，屏障保证了其中的语句不会到屏障的外面，即到写语句的后面，所有对共享变量的改动都同步到主存中，而不是同步到缓存中</p>
+<p>相对的在voliate变量的读指令前会加入读屏障，对变量的读取加载的都是写屏障中同步到主存中的最新数据，所以保证了可见性</p>
 
 
         <hr>
@@ -1244,5 +1256,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
