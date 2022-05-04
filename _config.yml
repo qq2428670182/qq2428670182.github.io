@@ -5,8 +5,8 @@
 
 # Site
 title: Live My Life
-subtitle: 淡而无味也是一种味道
-author: Mr.Vincent
+subtitle: 一入Java深似海
+author: Futari-sfh
 timezone:
 
 # Internationalization (i18n) Setting
@@ -35,15 +35,14 @@ permalink_defaults:
 ## Docs: https://www.jsdelivr.com/?docs=gh
 ## If Github Pages deploy，you can ues jsdelivr settings
 #
-# jsdelivr:
-#   jsdelivr_url: https://cdn.jsdelivr.net/gh/
-#   github_username: V-Vincen
-
+jsdelivr:
+  jsdelivr_url: https://cdn.jsdelivr.net/gh/
+  github_username: qq2428670182
 
 # Custom Setting Start
 
 # Site settings
-SEOTitle: 一如Java深似海
+SEOTitle: 一入Java深似海
 email: fzhang086@gmail.com
 description: "It's an IT blog..."
 keyword: "java,Futari,livemylife,IT  blog,Blog"
