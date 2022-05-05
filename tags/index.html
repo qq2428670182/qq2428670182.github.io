@@ -511,6 +511,8 @@
         
         <a href="#MVCC" title="MVCC" rel="1">MVCC</a>
         
+        <a href="#Maven" title="Maven" rel="1">Maven</a>
+        
       </div>
 
       <!-- 标签列表 -->
@@ -1085,6 +1087,30 @@
         
       </div>
       
+      <div class="one-tag-list">
+        <span class="fa fa-tag listing-seperator" id="Maven">
+          <span class="tag-text">Maven</span>
+        </span>
+        
+        <div class="post-preview">
+          <a href="/cn/Maven依赖冲突解决方法/">
+            <h2 class="post-title">
+              Maven依赖冲突解决方法
+              
+              -- cn
+              
+            </h2>
+            
+            <h3 class="post-subtitle">
+              Maven依赖冲突解决方法
+            </h3>
+            
+          </a>
+        </div>
+        <hr>
+        
+      </div>
+      
 
     </div>
   </div>
@@ -1623,5 +1649,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

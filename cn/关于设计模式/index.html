@@ -508,6 +508,10 @@
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/cn/Maven依赖冲突解决方法/" data-toggle="tooltip" data-placement="top" title="Maven依赖冲突解决方法">&larr; Previous Post</a>
+          </li>
+          
           
           <li class="next">
             <a href="/cn/Mybatis缓存/" data-toggle="tooltip" data-placement="top" title="关于Mybatis二级缓存">Next Post &rarr;</a>
@@ -1286,5 +1290,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

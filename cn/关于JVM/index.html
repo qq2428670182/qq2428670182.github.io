@@ -406,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">4</span> Minutes
+              Estimated Reading Time <span class="post-count">6</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.4k</span> In Total
+              Words <span class="post-count">2k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -505,6 +505,23 @@
 <p>标记整理：在清除的基础上进行改进，对剩余未清理的内存进行整理，增大可利用的连续空间（减少内存碎片）</p>
 <p>标记复制：空对象清理之后，将未清理的内存放入到to内存区中，每一次复制完之后，from和to区进行交换（名义上进行交换），标记复制的速度比标记整理要快，仅需复制到新空间之后直接把旧空间清空即可，但是需要开辟一块额外的空间，占用内存</p>
 <p>当对象在幸存者区一定清理次数后，可以升级为老年代（最少为15次，但是大对象和新生代空间紧张可以提前）</p>
+<p>方法区在逻辑上是独立的，但是在物理上还是一片共享的区域，可以说是堆内存，但是方法区又叫非堆，用来明确和堆的区别，在逻辑上且JDK1.7及之前，（持久代）永久代是方法区的一片区域，其中包括运行时常量池和字符串常量池等，运行时常量池里存储着字面值，变量，代码片段（.class文件）等等，1.8之后变为元空间，元空间是方法区的实现，里面存储着class字节码文件，程序执行时会动态从元空间中映射相应的代码去执行，在类加载时代码片段被加载到元空间中，直到虚拟机关闭元空间才卸载代码片段。</p>
+<h5 id="finalize和GC">finalize和GC</h5>
+<p>当Object失去GCROOTS的引用链时，会进行第一次标记，然后判断Object的finalize方法是否被重写或被执行过一次，注意finalize也只能被执行一次，所以只有一次复活的机会，如果满足上述条件，就会将Object放入队列F-Queue，由低优先级线程进行执行Queue中对象的finalize方法，执行完之后判断此时是否可达（即判断是是否有复活的机会），若可达则将对象移出即将被回收的内存，不可达则进行第二次标记，被第二次标记的对象会在下一次GC的时候被回收</p>
+<h6 id="如果在第一次标记后发现没有重写finalize或者对象的finalize已经被执行（后者说明该对象曾经被复活过一次），那么直接将该对象二次标记，等待GC">如果在第一次标记后发现没有重写finalize或者对象的finalize已经被执行（后者说明该对象曾经被复活过一次），那么直接将该对象二次标记，等待GC</h6>
+<blockquote>
+<p>扩展：final关键字</p>
+</blockquote>
+<blockquote>
+<p>引用（变量）被final修饰时，该引用不能再改变，即不能执行其他的对象（即只想地址不可变），但是只想地址的对象的内容是可变的，所以可以用其他的变量去修改final对象的值</p>
+</blockquote>
+<h4 id="JDK自带命令行工具">JDK自带命令行工具</h4>
+<p>jps：查看正在运行的java虚拟机进程</p>
+<p>jstat：查看虚拟机运行时信息</p>
+<p>jstack：查看虚拟机运行时刻栈的线程快照信息</p>
+<p>jmap：查看或导出堆的快照信息</p>
+<p>jhat：JDK自带的堆分析工具</p>
+<p>jinfo：实时查看和调整JVM的各项参数</p>
 
 
         <hr>
@@ -653,7 +670,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%A1%BA%E5%BA%8F%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">类加载的顺序：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">内存溢出：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E5%8C%BA%EF%BC%8C%E6%B0%B8%E4%B9%85%E4%BB%A3%EF%BC%8C%E5%85%83%E7%A9%BA%E9%97%B4%EF%BC%9A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">方法区，永久代，元空间：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JVM%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">JVM常用参数：</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%9A%84%E9%A1%BA%E5%BA%8F%EF%BC%9A"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">类加载的顺序：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%EF%BC%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">内存溢出：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%B9%E6%B3%95%E5%8C%BA%EF%BC%8C%E6%B0%B8%E4%B9%85%E4%BB%A3%EF%BC%8C%E5%85%83%E7%A9%BA%E9%97%B4%EF%BC%9A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">方法区，永久代，元空间：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JVM%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0%EF%BC%9A"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">JVM常用参数：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#finalize%E5%92%8CGC"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">finalize和GC</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%A6%82%E6%9E%9C%E5%9C%A8%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%A0%87%E8%AE%B0%E5%90%8E%E5%8F%91%E7%8E%B0%E6%B2%A1%E6%9C%89%E9%87%8D%E5%86%99finalize%E6%88%96%E8%80%85%E5%AF%B9%E8%B1%A1%E7%9A%84finalize%E5%B7%B2%E7%BB%8F%E8%A2%AB%E6%89%A7%E8%A1%8C%EF%BC%88%E5%90%8E%E8%80%85%E8%AF%B4%E6%98%8E%E8%AF%A5%E5%AF%B9%E8%B1%A1%E6%9B%BE%E7%BB%8F%E8%A2%AB%E5%A4%8D%E6%B4%BB%E8%BF%87%E4%B8%80%E6%AC%A1%EF%BC%89%EF%BC%8C%E9%82%A3%E4%B9%88%E7%9B%B4%E6%8E%A5%E5%B0%86%E8%AF%A5%E5%AF%B9%E8%B1%A1%E4%BA%8C%E6%AC%A1%E6%A0%87%E8%AE%B0%EF%BC%8C%E7%AD%89%E5%BE%85GC"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">如果在第一次标记后发现没有重写finalize或者对象的finalize已经被执行（后者说明该对象曾经被复活过一次），那么直接将该对象二次标记，等待GC</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JDK%E8%87%AA%E5%B8%A6%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">JDK自带命令行工具</span></a></li></ol>
         
         </div>
       </aside>
@@ -1293,5 +1310,20 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
 
 
 		
-	</body>
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>

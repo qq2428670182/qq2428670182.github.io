@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://qq2428670182.github.io/cn/Maven%E4%BE%9D%E8%B5%96%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2022-04-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://qq2428670182.github.io/cn/%E5%85%B3%E4%BA%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     
     <lastmod>2022-04-16</lastmod>
@@ -249,7 +256,7 @@
 
   <url>
     <loc>https://qq2428670182.github.io/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -257,168 +264,175 @@
   
   <url>
     <loc>https://qq2428670182.github.io/tags/IO/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Docker/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/HTML-CSS/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/python-%E7%88%AC%E8%99%AB/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/MYSQL/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Markdown/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Java-Spring/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Java-SpringMVC/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/SpringBoot/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/SpringBoot-RESTFUL/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Redis/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Elasticsearch/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/SpringBoot-RabbitMQ-Redis/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Spring-RabbitMQ/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Spring-quarrz-task/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Dubbo/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Java-spring/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/SpringMVC/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/Mybatis/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/JVM/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/%E7%B4%A2%E5%BC%95/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/tags/MVCC/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://qq2428670182.github.io/tags/Maven/</loc>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -427,49 +441,56 @@
   
   <url>
     <loc>https://qq2428670182.github.io/categories/IO/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/categories/Java-spring/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/categories/Mybatis/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/categories/JVM/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/categories/%E7%B4%A2%E5%BC%95/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://qq2428670182.github.io/categories/MVCC/</loc>
-    <lastmod>2022-05-02</lastmod>
+    <lastmod>2022-05-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://qq2428670182.github.io/categories/Maven/</loc>
+    <lastmod>2022-05-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
