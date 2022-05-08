@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sfhjavaer.github.io/tags/index.html</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sfhjavaer.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sfhjavaer.github.io/404.html</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sfhjavaer.github.io/cn/Maven%E4%BE%9D%E8%B5%96%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
     
     <lastmod>2022-04-27</lastmod>
@@ -33,27 +54,6 @@
     <loc>https://sfhjavaer.github.io/cn/%E6%AD%A3%E7%A1%AE%E7%90%86%E8%A7%A3MVCC/</loc>
     
     <lastmod>2022-04-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sfhjavaer.github.io/404.html</loc>
-    
-    <lastmod>2022-04-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sfhjavaer.github.io/tags/index.html</loc>
-    
-    <lastmod>2022-04-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://sfhjavaer.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-04-05</lastmod>
     
   </url>
   
@@ -263,7 +263,7 @@
 
   
   <url>
-    <loc>https://sfhjavaer.github.io/tags/IO/</loc>
+    <loc>https://sfhjavaer.github.io/tags/python-%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -278,13 +278,6 @@
   
   <url>
     <loc>https://sfhjavaer.github.io/tags/HTML-CSS/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://sfhjavaer.github.io/tags/python-%E7%88%AC%E8%99%AB/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -327,6 +320,13 @@
   
   <url>
     <loc>https://sfhjavaer.github.io/tags/SpringBoot-RESTFUL/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sfhjavaer.github.io/tags/SpringMVC/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -382,21 +382,21 @@
   </url>
   
   <url>
+    <loc>https://sfhjavaer.github.io/tags/IO/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://sfhjavaer.github.io/tags/Maven/</loc>
+    <lastmod>2022-05-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://sfhjavaer.github.io/tags/Java-spring/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://sfhjavaer.github.io/tags/SpringMVC/</loc>
-    <lastmod>2022-05-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://sfhjavaer.github.io/tags/Mybatis/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -410,7 +410,7 @@
   </url>
   
   <url>
-    <loc>https://sfhjavaer.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>https://sfhjavaer.github.io/tags/Mybatis/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -424,14 +424,14 @@
   </url>
   
   <url>
-    <loc>https://sfhjavaer.github.io/tags/MVCC/</loc>
+    <loc>https://sfhjavaer.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://sfhjavaer.github.io/tags/Maven/</loc>
+    <loc>https://sfhjavaer.github.io/tags/MVCC/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -447,14 +447,14 @@
   </url>
   
   <url>
-    <loc>https://sfhjavaer.github.io/categories/Java-spring/</loc>
+    <loc>https://sfhjavaer.github.io/categories/Maven/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://sfhjavaer.github.io/categories/Mybatis/</loc>
+    <loc>https://sfhjavaer.github.io/categories/Java-spring/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -468,7 +468,7 @@
   </url>
   
   <url>
-    <loc>https://sfhjavaer.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>https://sfhjavaer.github.io/categories/Mybatis/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -482,14 +482,14 @@
   </url>
   
   <url>
-    <loc>https://sfhjavaer.github.io/categories/MVCC/</loc>
+    <loc>https://sfhjavaer.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://sfhjavaer.github.io/categories/Maven/</loc>
+    <loc>https://sfhjavaer.github.io/categories/MVCC/</loc>
     <lastmod>2022-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
