@@ -140,10 +140,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://www.sfhjavaer.tech/archives/2021/">
+  <link rel="canonical" href="http://www.sfhjavaer.tech/cn/服务器搭建MinIo环境/">
   <title>
     
-      一入Java深似海
+      Linux手动搭建MinIo分布式存储步骤 - 一入Java深似海
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -301,29 +301,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      简体中文
-    </span>
-    <select id="lang-select" data-canonical="archives/2021/index.html">
-      
-      
-      <option value="cn"  selected >
-        简体中文
-      </option>
-      
-      <option value="en" >
-        English
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -376,18 +354,18 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io');
-      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io//img/header_img/lml_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/img/header_img/lml_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io//img/header_img/lml_bg.jpg');
     }
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/img/header_img/archive_bg2.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/img/header_img/lml_bg.jpg'); */
       
     }
 
@@ -410,10 +388,42 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>Live My Life</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">一入Java深似海</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#MinIO" title="MinIO">MinIO</a>
+              
+            </div>
+            <h1>Linux手动搭建MinIo分布式存储步骤</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by SFHJavaer on
+              2022-05-06
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">3</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">887</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -454,813 +464,310 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h4 id="Linux搭建MinIo环境详细步骤">Linux搭建MinIo环境详细步骤</h4>
+<blockquote>
+<p>1.去minIO官网下载安装包，或者使用wget直接进行下载,选择自己合适的版本</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://dl.min.io/server/minio/release/linux-amd64/minio</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2.给minio文件赋予可执行的权限</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chomd +x minio</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3.启动minio server端（后面的路径指定具体的文件存储目录）</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./minio server /usr/local/minio/dara</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>4.在环境变量中指定Minio登陆的用户名和密码</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export MINIO_ACCESS_KEY=myminioadmin </span><br><span class="line">export MINIO_SECRET_KEY=myminioadmin</span><br></pre></td></tr></table></figure>
+<p>PS：上述步骤可直接进行环境变量的添加，也可以手动打开profile进行添加</p>
+<p>使用 vi /etc/profile在末尾将上述代码添加即可</p>
+<blockquote>
+<p>5.后台运行MioIOserver</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">后台运行</span></span><br><span class="line">nohup ./minio server /usr/software/minio/data  &gt;  /usr/software/minio/minio.log 2&gt;&amp;1 &amp;#</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>6.启动后前台提示下面的代码,默认端口在9000</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@ww minio]# MINIO_ACCESS_KEY=myminioadmin MINIO_SECRET_KEY=myminioadmin ./minio server --config-dir /usr/software/minio/config /usr/software/minio/data</span><br><span class="line">Attempting encryption of all config, IAM users and policies on MinIO backend</span><br><span class="line">Endpoint:  http://192.168.51.80:9000http://127.0.0.1:9000    </span><br><span class="line">AccessKey: myminioadmin </span><br><span class="line">SecretKey: myminioadmin </span><br><span class="line"></span><br><span class="line">Browser Access:</span><br><span class="line">   http://192.168.51.80:9000http://127.0.0.1:9000    </span><br><span class="line"></span><br><span class="line">Command-line Access: https://docs.min.io/docs/minio-client-quickstart-guide</span><br><span class="line"><span class="meta">   $</span><span class="bash"> mc <span class="built_in">alias</span> <span class="built_in">set</span> myminio http://192.168.51.80:9000 myminioadmin myminioadmin</span></span><br><span class="line"></span><br><span class="line">Object API (Amazon S3 compatible):</span><br><span class="line">   Go:         https://docs.min.io/docs/golang-client-quickstart-guide</span><br><span class="line">   Java:       https://docs.min.io/docs/java-client-quickstart-guide</span><br><span class="line">   Python:     https://docs.min.io/docs/python-client-quickstart-guide</span><br><span class="line">   JavaScript: https://docs.min.io/docs/javascript-client-quickstart-guide</span><br><span class="line">   .NET:       https://docs.min.io/docs/dotnet-client-quickstart-guide</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>7.打开访问地址展示下列情况<br>
+PS:如果打不开服务器具体地址，说明防火墙没有打开，如果是端口被占用那么启动时就会提示报错，所以需要手动打开防火墙，在文章末尾进行添加步骤</p>
+</blockquote>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS82MjYyYmNjNWE5YTE3YzUwNTk0Mjk2MWU5YTQxZjM0ZC94bWxub3RlLzM1Mjc1MEU4QkZFOTQ4MDdBRUU3M0NBNDU4MDE0NUIzLzc4NQ?x-oss-process=image/format,png" alt="9000端口"></p>
+<p>登录之后展示以下界面</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS82MjYyYmNjNWE5YTE3YzUwNTk0Mjk2MWU5YTQxZjM0ZC94bWxub3RlLzAwOTJFNDQ4QTgwRTQ5OEU4M0YyMTNBNzA4QjZBN0E5Lzc5MA?x-oss-process=image/format,png" alt="登陆展示视图"></p>
+<p>进入系统后，我们先要点击右下角的“+”按钮，创建一个文件桶（输入名称后，回车即可），在上传文件到这个文件桶中。Create bucket（创建文件桶）、Upload file（上传文件）。</p>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS82MjYyYmNjNWE5YTE3YzUwNTk0Mjk2MWU5YTQxZjM0ZC94bWxub3RlLzVDNzkxQTFDOUU4MjQ3MDlCQzg4NTA2QkRBNkJEODc4LzgwMQ?x-oss-process=image/format,png" alt="上传完成"></p>
+<h6 id="在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）">在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）</h6>
+<blockquote>
+<p>8.将桶中的图片进行分享，注意要先将桶设置中的分享设置为public，否则为私有资源不能分享，分享的资源可以设置过期时间</p>
+</blockquote>
+<p><img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9ub3RlLnlvdWRhby5jb20veXdzL3B1YmxpYy9yZXNvdXJjZS82MjYyYmNjNWE5YTE3YzUwNTk0Mjk2MWU5YTQxZjM0ZC94bWxub3RlLzhFMjUxNTMwQTMwMjRCNjU4RjNBQUVCQzY3OTA5QUI0LzgxOQ?x-oss-process=image/format,png" alt="分享时间设置"></p>
+<p>将分享链接在后端进行提取，进行业务层的运转就可以了（可以当作简单的图床）</p>
+<p>PS：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">我们的minio之前是通过命令行直接启动的，并没有指定后台运行，而且端口跟AccessKey和SecretKey都还是使用默认的，这里需要在启动的时候指定一下。</span><br><span class="line">#指定环境变量</span><br><span class="line">export MINIO_ACCESS_KEY=username</span><br><span class="line">export MINIO_SECRET_KEY=password</span><br><span class="line">#脚本中添加后台运行执行后</span><br><span class="line">nohup sudo /usr/local/minio/minio server --address=0.0.0.0:9000 --config-dir /etc/minio /data/minioData &gt; /usr/local/minio/minio.log 2&gt;&amp;1&amp;</span><br><span class="line">可以将上面的命令放在一个自己新建的.sh可执行文件中，记得给当前用户加上执行权限</span><br><span class="line"></span><br><span class="line">chmod u+x *.sh</span><br><span class="line">每一次启动MioIO直接启动sh脚本即可</span><br><span class="line">这样我们的minio服务端基本的配置算是ok了。</span><br></pre></td></tr></table></figure>
+<h5 id="开启防火墙端口步骤">开启防火墙端口步骤;</h5>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#1、编辑ssh.xml</span><br><span class="line">vim /usr/lib/firewalld/services/ssh.xml</span><br><span class="line"></span><br><span class="line">#2、开放43855、9090端口</span><br><span class="line">&lt;port protocol=&quot;tcp&quot; port=&quot;43855&quot;/&gt;</span><br><span class="line">&lt;port protocol=&quot;tcp&quot; port=&quot;9090&quot;/&gt;</span><br><span class="line"></span><br><span class="line">#3、重启防火墙 </span><br><span class="line">systemctl restart firewalld</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
+          
+          
+          <li class="next">
+            <a href="/cn/Maven依赖冲突解决方法/" data-toggle="tooltip" data-placement="top" title="Maven依赖冲突解决方法">Next Post &rarr;</a>
+          </li>
+          
+        </ul>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
+</div>
+<!-- tip end -->
+
+        <!-- tip end -->
+        
+
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=Linux手动搭建MinIo分布式存储步骤&body=Hi,I found this website and thought you might like it http://www.sfhjavaer.tech/cn/服务器搭建MinIo环境/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+        <!-- Sharing End -->
+        
+        <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <script src="https://cdn.jsdelivr.net/gh/SFHjavaer/SFHjavaer.github.io/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: '',
+      id: 'Fri May 06 2022 02:34:17 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'en',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Linux%E6%90%AD%E5%BB%BAMinIo%E7%8E%AF%E5%A2%83%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Linux搭建MinIo环境详细步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%9C%A8%E5%90%8E%E7%AB%AF%E8%BF%9B%E8%A1%8CSpring%E5%92%8CMInio%E7%9A%84%E6%95%B4%E5%90%88%EF%BC%8C%E5%B0%86%E6%96%87%E4%BB%B6%E8%BF%9B%E8%A1%8C%E4%B8%8A%E4%BC%A0%EF%BC%8C%E4%BC%9A%E5%8F%91%E7%8E%B0%E5%9B%BE%E7%89%87%E5%B7%B2%E7%BB%8F%E5%AD%98%E5%82%A8%E5%88%B0%E4%BA%86MInIO%E7%9A%84Bucket%E4%B8%AD%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BA%86%E5%9F%BA%E4%BA%8EMinIO%E7%9A%84%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8%EF%BC%88%E5%9C%A8%E5%90%8E%E7%AB%AF%E8%A6%81%E6%8C%87%E5%AE%9A%E8%B5%84%E6%BA%90%E6%89%80%E5%AD%98%E5%82%A8%E7%9A%84%E5%85%B7%E4%BD%93Bucket%E4%BD%8D%E7%BD%AE%EF%BC%8C%E4%B8%8A%E4%BC%A0%E4%BC%9A%E5%8F%8A%E8%87%AA%E5%8A%A8%E5%8C%B9%E9%85%8D%E4%B8%8A%E4%BC%A0%EF%BC%89"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">在后端进行Spring和MInio的整合，将文件进行上传，会发现图片已经存储到了MInIO的Bucket中，实现了基于MinIO的分布式存储（在后端要指定资源所存储的具体Bucket位置，上传会及自动匹配上传）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E5%BC%80%E5%90%AF%E9%98%B2%E7%81%AB%E5%A2%99%E7%AB%AF%E5%8F%A3%E6%AD%A5%E9%AA%A4"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">开启防火墙端口步骤;</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
     
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
+
+
+      <!-- Sidebar Container -->
+      <div class="
                 col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2022">
-          <span class="tag-text">2022</span>
-        </span>
-        <ul>
-          
-          <li>
-            05-06
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/服务器搭建MinIo环境/" style="color: #0085a1">
-              <span>
-                Linux手动搭建MinIo分布式存储步骤
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Maven依赖冲突解决方法/" style="color: #0085a1">
-              <span>
-                Maven依赖冲突解决方法
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/关于设计模式/" style="color: #0085a1">
-              <span>
-                常见单例模式五种设计方式
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-12
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/关于Mybatis二级缓存/" style="color: #0085a1">
-              <span>
-                关于Mybatis二级缓存
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/正确理解MVCC/" style="color: #0085a1">
-              <span>
-                正确理解MVCC
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/关于数据库索引/" style="color: #0085a1">
-              <span>
-                关于数据库索引
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-05
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/关于JVM/" style="color: #0085a1">
-              <span>
-                关于JVM
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-02
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/关于Mybatis分页的回顾/" style="color: #0085a1">
-              <span>
-                关于Mybatis分页的详细回顾
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-03-07-简单实现ActiveMQ、RabbitMQ/" style="color: #0085a1">
-              <span>
-                简单实现ActiveMQ、RabbitMQ
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-02
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-03-02-SpringBoot实现定时任务/" style="color: #0085a1">
-              <span>
-                SpringBoot实现定时任务
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-02-25-SpringBoot高并发秒杀项目实录/" style="color: #0085a1">
-              <span>
-                SpringBoot高并发秒杀
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-02-25-SpringBoot-整合Jetcache，j2cache/" style="color: #0085a1">
-              <span>
-                SpringBoot-整合Jetcache，j2cache
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-22
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-02-22-ES基本入门操作/" style="color: #0085a1">
-              <span>
-                ES基本入门操作与SpringBoot整合
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            02-09
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-02-09-Redis快速入门/" style="color: #0085a1">
-              <span>
-                Redis学习笔记
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-01-29-SpringBoot开发和运维问题/" style="color: #0085a1">
-              <span>
-                SpringBoot运维测试和配置问题
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            01-20
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-01-20-SpringBoot-REST风格/" style="color: #0085a1">
-              <span>
-                SpringBoot RESTful风格
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
-          <span class="tag-text">2021</span>
-        </span>
-        <ul>
-          
-          <li>
-            12-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-12-29-SpringMVC拦截器/" style="color: #0085a1">
-              <span>
-                SpringMVC拦截器
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-19
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-12-19-SpringBoot表现层消息一致性处理/" style="color: #0085a1">
-              <span>
-                SpringBoot表现层消息一致性处理
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-11-22-SpringMVC处理器方法的返回值/" style="color: #0085a1">
-              <span>
-                SpringMVC处理器方法的返回值
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-08
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-11-20-SpringMVC笔记/" style="color: #0085a1">
-              <span>
-                SpringMVC笔记
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-08
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-11-08-Spring_AOP/" style="color: #0085a1">
-              <span>
-                Spring AOP笔记
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-03
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-11-03-Markdown快速入门/" style="color: #0085a1">
-              <span>
-                Markdown快速入门
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-31
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-10-31-MYSQL/" style="color: #0085a1">
-              <span>
-                MYSQL重点知识点梳理
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-30
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-10-30-HTML CSS/" style="color: #0085a1">
-              <span>
-                利用HTML和CSS实现简单的淘宝购物车前端
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-14
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-10-14-Spider/" style="color: #0085a1">
-              <span>
-                基于搜狗微信的seleinum公众号爬虫
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-03
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2021-10-03-Docker搭建项目/" style="color: #0085a1">
-              <span>
-                Docker部署项目到服务器上
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            08-19
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/spring报错：提示找不到mapper文件/" style="color: #0085a1">
-              <span>
-                spring报错：提示找不到mapper文件
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-27
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-03-25-常见的前端加密方法/" style="color: #0085a1">
-              <span>
-                常见的前端加密方法
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-22
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-03-22-移动端开发之页面静态化 - 副本/" style="color: #0085a1">
-              <span>
-                移动端开发之页面静态化.
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-03-21-Dubbo快速入门/" style="color: #0085a1">
-              <span>
-                Dubbo快速入门
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            03-07
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/2022-03-10-SSM项目Curd过程中出现的问题/" style="color: #0085a1">
-              <span>
-                SSM医疗后台Curd过程中出现的问题
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-          <span class="tag-text">2020</span>
-        </span>
-        <ul>
-          
-          <li>
-            07-31
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/cn/Java IO流/" style="color: #0085a1">
-              <span>
-                Java IO流
-                
-                -- cn
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-
-      <!-- 如果开启评论功能 -->
-      
-    </div>
-
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/">来访者</a></h5>
-
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
-        <hr>
-    
         <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#MinIO" title="MinIO">MinIO</a>
+            
+          </div>
+        </section>
+        
 
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
-    
-    
-    
-    <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
-    
-    
-    
-    <a href="/tags/#HTML CSS" title="HTML CSS" rel="1">HTML CSS</a>
-    
-    
-    
-    <a href="/tags/#MYSQL" title="MYSQL" rel="1">MYSQL</a>
-    
-    
-    
-    <a href="/tags/#Markdown" title="Markdown" rel="1">Markdown</a>
-    
-    
-    
-    <a href="/tags/#Java Spring" title="Java Spring" rel="1">Java Spring</a>
-    
-    
-    
-    <a href="/tags/#Java SpringMVC" title="Java SpringMVC" rel="2">Java SpringMVC</a>
-    
-    
-    
-    <a href="/tags/#SpringBoot" title="SpringBoot" rel="3">SpringBoot</a>
-    
-    
-    
-    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
-    
-    
-    
-    <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
-    
-    
-    
-    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
-    
-    
-    
-    <a href="/tags/#Elasticsearch" title="Elasticsearch" rel="1">Elasticsearch</a>
-    
-    
-    
-    <a href="/tags/#SpringBoot RabbitMQ Redis" title="SpringBoot RabbitMQ Redis" rel="1">SpringBoot RabbitMQ Redis</a>
-    
-    
-    
-    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ" rel="3">Spring RabbitMQ</a>
-    
-    
-    
-    <a href="/tags/#Spring quarrz task" title="Spring quarrz task" rel="1">Spring quarrz task</a>
-    
-    
-    
-    <a href="/tags/#Dubbo" title="Dubbo" rel="1">Dubbo</a>
-    
-    
-    
-    <a href="/tags/#加密算法" title="加密算法" rel="1">加密算法</a>
-    
-    
-    
-    <a href="/tags/#IO" title="IO" rel="1">IO</a>
-    
-    
-    
-    <a href="/tags/#Maven" title="Maven" rel="1">Maven</a>
-    
-    
-    
-    <a href="/tags/#Java spring" title="Java spring" rel="1">Java spring</a>
-    
-    
-    
-    <a href="/tags/#JVM" title="JVM" rel="1">JVM</a>
-    
-    
-    
-    <a href="/tags/#Mybatis" title="Mybatis" rel="2">Mybatis</a>
-    
-    
-    
-    <a href="/tags/#索引" title="索引" rel="1">索引</a>
-    
-    
-    
-    <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
-    
-    
-    
-    <a href="/tags/#MVCC" title="MVCC" rel="1">MVCC</a>
-    
-    
-    
-    <a href="/tags/#MinIO" title="MinIO" rel="1">MinIO</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/fatpeople.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>Fat people have no future, either thin or die...</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/SFHJavaer">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://twitter.com/SFHJavaer">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.instagram.com/SFHJavaer">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="http://weibo.com/SFHJavaer">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../cn/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BAMinIo%E7%8E%AF%E5%A2%83/">
-      <li>Linux手动搭建MinIo分布式存储步骤</li>
-    </a>
-    
-    <a href="../../cn/Maven%E4%BE%9D%E8%B5%96%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
-      <li>Maven依赖冲突解决方法</li>
-    </a>
-    
-    <a href="../../cn/%E5%85%B3%E4%BA%8E%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-      <li>常见单例模式五种设计方式</li>
-    </a>
-    
-    <a href="../../cn/%E5%85%B3%E4%BA%8EMybatis%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98/">
-      <li>关于Mybatis二级缓存</li>
-    </a>
-    
-    <a href="../../cn/%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95/">
-      <li>关于数据库索引</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
         <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="https://SFHJavaer.github.io/" target="_blank">Futari</a></li>
-  
-  <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
-  
-  <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
-  
-  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>链友</h5>
+        <ul class="list-inline">
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#IO">
-      <li>IO</li>
-    </a>
-    
-    <a href="/categories/#Maven">
-      <li>Maven</li>
-    </a>
-    
-    <a href="/categories/#Java spring">
-      <li>Java spring</li>
-    </a>
-    
-    <a href="/categories/#JVM">
-      <li>JVM</li>
-    </a>
-    
-    <a href="/categories/#Mybatis">
-      <li>Mybatis</li>
-    </a>
-    
-    <a href="/categories/#索引">
-      <li>索引</li>
-    </a>
-    
-    <a href="/categories/#设计模式">
-      <li>设计模式</li>
-    </a>
-    
-    <a href="/categories/#MVCC">
-      <li>MVCC</li>
-    </a>
-    
-    <a href="/categories/#MinIO">
-      <li>MinIO</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
+          
+          <li>
+            <a href="https://SFHJavaer.github.io/" target="_blank">Futari</a>
+          </li>
+          
+          <li>
+            <a href="http://beantech.org" target="_blank">Bean Tech</a>
+          </li>
+          
+          <li>
+            <a href="http://huangxuan.me" target="_blank">Hux Blog</a>
+          </li>
+          
+          <li>
+            <a href="https://hexo.io/" target="_blank">Hexo</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
@@ -1402,7 +909,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "SFHjavaer";
     let ghPages = gh + ".github.io";
-    let pagePath = "archives/2021/index.html";
+    let pagePath = "cn/服务器搭建MinIo环境/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
