@@ -140,10 +140,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://www.sfhjavaer.tech/cn/ceShi/">
+  <link rel="canonical" href="http://www.sfhjavaer.tech/cn/企业开发中遇到的常用注解/">
   <title>
     
-      ceShi - 一入Java深似海
+      企业开发中遇到的常用注解 - 一入Java深似海
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -391,14 +391,14 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#算法" title="算法">算法</a>
+              <a class="tag" href="/tags/#注解" title="注解">注解</a>
               
             </div>
-            <h1>ceShi</h1>
+            <h1>企业开发中遇到的常用注解</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Futari on
-              2022-06-03
+              2022-07-07
             </span>
 
 
@@ -406,11 +406,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">3</span> Minutes
+              Estimated Reading Time <span class="post-count">1</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">940</span> In Total
+              Words <span class="post-count">435</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -472,41 +472,27 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <blockquote>
-<p>白板写题和普通题的区别就是</p>
-<p>1.需要自己自定义类和方法，基础结构一定不能写错，哪里是中括号，哪里是小括号</p>
-<p>2.自定义Scanner输入，自己Sout输出打印结果</p>
-<p>3.类名一般是Main，方法名一般自定义</p>
-</blockquote>
-<h4 id="算法：二叉树的遍历">算法：二叉树的遍历</h4>
-<p>题目要求：返回的是一个int数组，但是在树遍历中树的节点的数量是无法确定的，所以如果要返回int[]只能先用ArrayList存完再进行for转换。</p>
-<p>一般来说可以这样写</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> root TreeNode类 </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> int整型一维数组</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    List&lt;TreeNode&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] postorderTraversal (TreeNode root) &#123;</span><br><span class="line">        <span class="comment">// write code here</span></span><br><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        postorderTraversal(root.left);</span><br><span class="line">        postorderTraversal(root.right);</span><br><span class="line">        list.add(root);</span><br><span class="line">        <span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[list.size()];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;list.size();i++)&#123;</span><br><span class="line">            array[i] = list.get(i).val;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> array;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>但是我在写完之后发现对于传入的树为空时，返回的值是[]，但是方法里返回的是null，如果是面试手写要求可能没那么严格，但是写题时需要抽出来一个方法，来创建一个int[]，如果list为null，就返回一个空array，如果像上述的写法的话，如果传入的是空树，那么返回null，这个题的null是不能解析为[]的，必须返回的是一个空数组，所以需要腾出来一个方法。</p>
-<h4 id="算法：层序遍历和按之字形打印">算法：层序遍历和按之字形打印</h4>
-<p>前者采用的思路是队列（推荐）或者递归，不管是不是递归，时间和空间复杂度都是O(n)，注意之字形打印时还是借助队列，所以复杂度都还是O(n)</p>
-<p>后者采用的思路是队列（推荐）或者是双栈（双栈本质上还是实现的队列），观察z字形的特征，可以发现可按照奇偶数的层序进行遍历，奇数正序偶数倒序</p>
-<h6 id="层序遍历如下">层序遍历如下</h6>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *   int val = 0;</span></span><br><span class="line"><span class="comment"> *   TreeNode left = null;</span></span><br><span class="line"><span class="comment"> *   TreeNode right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> root TreeNode类</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> int整型ArrayList&lt;ArrayList&lt;&gt;&gt;</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//Queue是Java中的队列接口，通常使用链表来实现这个接口，因为队列经常要插入删除，链表的插入删除时间复杂度比较小。</span></span><br><span class="line">    <span class="comment">//即将链表当作队列，FIFO</span></span><br><span class="line">    Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; arrayList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; levelOrder (TreeNode root) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//赋值运算符两端才会产生自动装箱拆箱</span></span><br><span class="line">        queue.add(root);</span><br><span class="line">        count ++;</span><br><span class="line">        <span class="keyword">while</span>(!queue.isEmpty())&#123;</span><br><span class="line">            <span class="comment">//没遍历一层，就将list进行清空但是不能使用clear，所以每一次循环都new一个新的再添加，引用指向新的空ArrayList</span></span><br><span class="line">            <span class="comment">// （原本的对象不由list引用了，但是arrayList中有引用所以对象也不会被回收）</span></span><br><span class="line">            ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="comment">//            queue.add(new Integer(root.val));</span></span><br><span class="line">            <span class="keyword">while</span> (count &gt; <span class="number">0</span>)&#123;</span><br><span class="line">                    TreeNode node = queue.element();</span><br><span class="line">                    list.add(node.val);</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span>(node.left != <span class="keyword">null</span>)&#123;</span><br><span class="line">                        queue.add(node.left);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(node.right != <span class="keyword">null</span>)&#123;</span><br><span class="line">                        queue.add(node.right);</span><br><span class="line">                    &#125;</span><br><span class="line">                    queue.remove();</span><br><span class="line">                    count --;</span><br><span class="line">                &#125;</span><br><span class="line">            count = queue.size();</span><br><span class="line">            arrayList.add(list);</span><br><span class="line">            <span class="comment">//用list.clear()方法清空list；用此方法，其它引用该list的值也会变成空,比如其他list中add了该list的元素即地址</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> arrayList;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Ps：单向队列方法是offer和poll，而双向deque的区别就是首位有对应的方法，即offerFirst和pollFirst</p>
-</blockquote>
-<h5 id="注意在创建变量时，下列语句">注意在创建变量时，下列语句</h5>
-<p><code>ArrayList&lt;ArrayList&lt;Integer&gt;&gt; res = new ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();</code></p>
-<p>后面泛型可以简写为new ArrayList&lt;&gt;();但是不能写成new ArrayList&lt;ArrayList&lt;&gt;&gt;();</p>
+        <h4 id="Builder实现建造者模式">@Builder实现建造者模式</h4>
+<h5 id="建造者模式。简单来说，就是一步步创建一个对象，它对用户屏蔽了里面构建的细节，但却可以精细地控制对象的构造过程，而不是一次性的完成对象构建。"><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F&amp;spm=1001.2101.3001.7020">建造者模式</a>。简单来说，就是一步步创建一个对象，它对用户屏蔽了里面构建的细节，但却可以精细地控制对象的构造过程，而不是一次性的完成对象构建。</h5>
+<h6 id="这个注解提供了一种优雅的编程方式，用来创建对象，原理上通过以下来实现">这个注解提供了一种优雅的编程方式，用来创建对象，原理上通过以下来实现</h6>
+<h6 id="（Ps：父类的属性不能产于builder）">（Ps：父类的属性不能产于builder）</h6>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> finalVal = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>经过编译之后的字节码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> finalVal = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    Demo(String name, <span class="keyword">int</span> age) &#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//生成了一个静态的builder()和一个静态内部类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Demo.<span class="function">DemoBuilder <span class="title">builder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Demo.DemoBuilder();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoBuilder</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">        DemoBuilder() &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> Demo.<span class="function">DemoBuilder <span class="title">name</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> Demo.<span class="function">DemoBuilder <span class="title">age</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.age = age;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Demo <span class="title">build</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Demo(<span class="keyword">this</span>.name, <span class="keyword">this</span>.age);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            String var10000 = <span class="keyword">this</span>.name;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>因此我们构造一个对象就可以优雅的这么来：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	<span class="comment">//不用写内部类的类名，直接外部类就能调</span></span><br><span class="line">       Demo demo = Demo.builder().name(<span class="string">&quot;aa&quot;</span>).age(<span class="number">10</span>).build();</span><br><span class="line">       System.out.println(demo); </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>里面有一些自定义参数，我表示，完全没有必要去自定义。直接调用@Builder.Default用默认</p>
+<h4 id="WebFilter配置Servlet过滤器（不是拦截器，两者不同）">@WebFilter配置Servlet过滤器（不是拦截器，两者不同）</h4>
+<p>先搞清楚两者的区别，拦截器是实现接口之后并添加到拦截器集合中才会生效，Interceptor是Aop的一种实现方式，在访问前或者访问后加入某些操作，也就是实现了解耦合。</p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/树-算法做题总结/" data-toggle="tooltip" data-placement="top" title="树-算法做题总结">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/服务器搭建过程中遇到的问题/" data-toggle="tooltip" data-placement="top" title="服务器搭建过程中遇到的数据库问题">Next Post &rarr;</a>
+            <a href="/cn/回溯算法/" data-toggle="tooltip" data-placement="top" title="回溯问题">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -555,7 +541,7 @@
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=ceShi&body=Hi,I found this website and thought you might like it http://www.sfhjavaer.tech/cn/ceShi/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=企业开发中遇到的常用注解&body=Hi,I found this website and thought you might like it http://www.sfhjavaer.tech/cn/企业开发中遇到的常用注解/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -589,7 +575,7 @@
       repo: 'SFHJavaer.github.io',
       owner: 'sfhjavaer',
       admin: 'sfhjavaer',
-      id: 'Fri Jun 03 2022 00:00:00 GMT+0800', // Ensure uniqueness and length less than 50
+      id: 'Thu Jul 07 2022 00:00:00 GMT+0800', // Ensure uniqueness and length less than 50
       distractionFreeMode: false, // Facebook-like distraction free mode
       perPage: 10,
       pagerDirection: 'last',
@@ -654,7 +640,7 @@
           </h5>
           <div class="tags">
             
-            <a class="tag" href="/tags/#算法" title="算法">算法</a>
+            <a class="tag" href="/tags/#注解" title="注解">注解</a>
             
           </div>
         </section>
@@ -878,7 +864,7 @@
     let jsdelivr = "https://cdn.jsdelivr.net/gh/";
     let gh = "SFHjavaer";
     let ghPages = gh + ".github.io";
-    let pagePath = "cn/ceShi/";
+    let pagePath = "cn/企业开发中遇到的常用注解/";
     let jsdelivrurl;
     if (pagePath.indexOf("index.html") != -1) {
       jsdelivrurl = jsdelivr + gh + "/" + ghPages;
