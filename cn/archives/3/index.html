@@ -244,6 +244,19 @@
 
           
           
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
           <li>
             <a href="/about/">
               
@@ -255,23 +268,10 @@
           
           
           
-          
-          
           <li>
             <a href="/categories/">
               
               分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              归档
               
               
             </a>
@@ -479,6 +479,156 @@
   <!-- top end -->
   
 
+  <a href="/cn/2022-03-07-简单实现ActiveMQ、RabbitMQ/">
+    <h2 class="post-title">
+      简单实现ActiveMQ、RabbitMQ
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      JMS：一个规范的接口，相当于JDBC
+JMS消息模型有两种：p2p（点对点模式）和pub-sub（发布者-订阅者模式）
+JMS常用的消息种类我们主要使用BytesMessage
+规范的实现主要有：ActiveMQ，Redis，HornetMQ，RabbitMQ，RocketMQ（没完全遵守JMS规范）
+AMQP：协议，对定了网络交换的数据格式
+ActiveMQ
+MQ都是在配置文件中加配置，......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-03-07
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ">Spring RabbitMQ</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2022-03-02-SpringBoot实现定时任务/">
+    <h2 class="post-title">
+      SpringBoot实现定时任务
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      两种方式实现SpringBoot定时任务
+整合quartz：
+首先使用util包下自带的Timmer类
+12345678910111213public class TimerTaskApp &#123;    public static void main(String[] args) &#123;        Timer timer = new Timer();        Timer......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-03-02
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Spring quarrz task" title="Spring quarrz task">Spring quarrz task</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2022-02-25-SpringBoot-整合Jetcache，j2cache/">
+    <h2 class="post-title">
+      SpringBoot-整合Jetcache，j2cache
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Springboot 整合三方（Jetcache，j2cache）的具体演示
+缓存：提高永久存储介质的读取效率，并且提供临时的数据存储空间
+可以用HashMap存储数据，不借用数据库，实现类似的缓存机制
+SpringBoot提供了多种缓存,常用的有Ehcache，Redis，memcached，不指定默认为simple
+在引导类中使用@EnableCaching来启用缓存
+在业务层方法上使用......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-02-25
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#SpringBoot" title="SpringBoot">SpringBoot</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2022-02-25-SpringBoot高并发秒杀项目实录/">
+    <h2 class="post-title">
+      SpringBoot高并发秒杀
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      实现高性能、一致性、高可用
+前端进行一次md5加密，传输过程中再进行一次加密，提高安全程度
+利用逆向工程由数据库表和模板来生成对应的实体类、接口、实现类等等，需要的保留，不需要的在后续中删除
+开发登陆功能是为了为后续的秒杀功能提供鉴权，只有用户才能进行秒杀
+登陆页面中校验和前端的返回值不再使用return返回数据枚举或常量类，而是抛出异常来被ControllerAdvice捕获，进行统一的异......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-02-25
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#SpringBoot RabbitMQ Redis" title="SpringBoot RabbitMQ Redis">SpringBoot RabbitMQ Redis</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/2022-02-22-ES基本入门操作/">
     <h2 class="post-title">
       ES基本入门操作与SpringBoot整合
@@ -488,11 +638,14 @@
     </h3>
     <div class="post-content-preview">
       ES：分布式全文搜索引擎
+
 windiows安装之后运行bat批处理文件执行
+
+
 ES没有数据库的概念，但是有索引的概念
 
 启动Es后，直接对ES发请求，在请求路径之后跟上索引（http://localhost:9200/books），ES全面支持Restful风格的操作
-123456PUT：返回boolean类型的Json数据，字段有acknowledged（操作是否成功），index（你提交的......
+123456PUT：返回boolean类型的Json数据，字段有acknowledged（操作是否成功），index（你......
     </div>
   </a>
   
@@ -525,8 +678,11 @@ ES没有数据库的概念，但是有索引的概念
       
     </h3>
     <div class="post-content-preview">
-      Redis非关系型数据库学习笔记单进程单进程模型来处理客户端的请求。对读写等事件的响应是通过对epoll函数的包装来做到的。Redis的实际处理速度完全依靠主进程的执行效率；epoll是Linux内核为处理大批量文件描述符而作了改进的epoll，是Linux下多路复用IO接口select/poll的增强版本，它能显著提高程序在大量并发连接中只有少量活跃的情况下的系统CPU利用率；
-redis......
+      Redis非关系型数据库学习笔记
+单进程
+单进程模型来处理客户端的请求。对读写等事件的响应是通过对epoll函数的包装来做到的。Redis的实际处理速度完全依靠主进程的执行效率；
+epoll是Linux内核为处理大批量文件描述符而作了改进的epoll，是Linux下多路复用IO接口select/poll的增强版本，它能显著提高程序在大量并发连接中只有少量活跃的情况下的系统CPU利用率；
+re......
     </div>
   </a>
   
@@ -598,13 +754,14 @@ redis......
       
     </h3>
     <div class="post-content-preview">
-      Springboot RESTFUL风格RESTful风格的url的优点：
+      Springboot RESTFUL风格
+RESTful风格的url的优点：
 1）隐藏资源的访问行为，无法通过链接地址判断对资源的操作
 2）书写简化
 REST是一种风格不是规范，或是现在已经约定俗成的规范
 描述模块的名称通常使用复数加s，表示此类资源而不是单个资源
 按照REST访问资源时使用行为动作来区分进行何种操作（一般是8种请求方式），这种访问方式叫RESTful
-实现步骤：1）设定htt......
+实现步骤：1）设定ht......
     </div>
   </a>
   
@@ -697,155 +854,6 @@ data代表传送的数据（data中多条数据即为列表json）
 </div>
 <hr>
 
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-11-22-SpringMVC处理器方法的返回值/">
-    <h2 class="post-title">
-      SpringMVC处理器方法的返回值
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      SpringMVC处理器方法的返回值1）ModelAndView：传递数据并且跳转到其他资源（视图），对视图进行forward，如果有多余的部分则该该返回值不合适2）String：表示视图，可以逻辑名称，也可以是完整视图路径，逻辑名称需要配置视图解析器，可以直接在方法中return“视图名称”3）void：多用于响应ajax请求，不需要返回对象，直接前后端分离动态改变
-
-处理ajax，使用j......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java SpringMVC" title="Java SpringMVC">Java SpringMVC</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-11-08-Spring_AOP/">
-    <h2 class="post-title">
-      Spring AOP笔记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      AOP（面向切面编程）1.动态代理实现方式：jdk动态代理。使用jdk中的Proxy，Method，InvocationHander创建代理对象
-此种要求目标类必须实现接口
-cglib动态代理：第三方工具库，通过继承来创建代理对象，继承目标类，创建子类（代理对象），要求目标类不能是final，方法也不能是final，因为final不能被继承或修改
-123456789动态代理的作用：1）在源代......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-08
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java Spring" title="Java Spring">Java Spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-11-20-SpringMVC笔记/">
-    <h2 class="post-title">
-      SpringMVC笔记
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Controller：控制器对象，把创建的对象作为控制器使用，并把该对象放入SpringMVC容器中，可以接受请求显示处理结果，当作Servlet来使用，但是使用@Controller注解创建的是一个普通类的对象，不是Servlet，但是SpringMVC赋予了其一些特殊功能中央调度器：DispatcherServlet是SpringMvc中的一个Servlet对象，负责接收用户的所有请求之......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-08
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Java SpringMVC" title="Java SpringMVC">Java SpringMVC</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2021-11-03-Markdown快速入门/">
-    <h2 class="post-title">
-      Markdown快速入门
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Markdown快速入门
-代码块：
-在英文状态下输入三个漂号，自动转换为代码块,注意要在格式符号和被操作字符之间加一个空格
-12​``` java​```python
-
-标题：
-1234标题分从大到小分6级，每一级多加一个## 1## 2### 3
-1
-2
-3
-
-字体修饰
-12345678//加粗**加粗字体**//代码高亮显示(要在偏好中进行设置)==高亮代码==//删除线~~被删除文字~......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-11-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Markdown" title="Markdown">Markdown</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
 
   <!-- Pager -->
   <ul class="pager">
@@ -898,11 +906,11 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
   <div class="tags">
     
     
-    <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
-    
-    
-    
     <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
+    
+    
+    
+    <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
     
     
     
@@ -930,15 +938,15 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
     
     
     
-    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
-    
-    
-    
     <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
     
     
     
     <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
     
     
     
@@ -950,11 +958,11 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
     
     
     
-    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ" rel="3">Spring RabbitMQ</a>
-    
-    
-    
     <a href="/tags/#Spring quarrz task" title="Spring quarrz task" rel="1">Spring quarrz task</a>
+    
+    
+    
+    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ" rel="3">Spring RabbitMQ</a>
     
     
     
@@ -966,6 +974,14 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
     
     
     
+    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    
+    
+    
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    
+    
+    
     <a href="/tags/#IO" title="IO" rel="1">IO</a>
     
     
@@ -974,7 +990,15 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
     
     
     
+    <a href="/tags/#笔试" title="笔试" rel="1">笔试</a>
+    
+    
+    
     <a href="/tags/#Java spring" title="Java spring" rel="1">Java spring</a>
+    
+    
+    
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
     
     
     
@@ -986,23 +1010,19 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
     
     
     
-    <a href="/tags/#索引" title="索引" rel="1">索引</a>
-    
-    
-    
     <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
     
     
     
-    <a href="/tags/#MVCC" title="MVCC" rel="1">MVCC</a>
+    <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
     
     
     
     <a href="/tags/#MinIO" title="MinIO" rel="1">MinIO</a>
-    
-    
-    
-    <a href="/tags/#多线程" title="多线程" rel="1">多线程</a>
     
     
     
@@ -1014,15 +1034,19 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
     
     
     
-    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    <a href="/tags/#MVCC" title="MVCC" rel="1">MVCC</a>
     
     
     
-    <a href="/tags/#笔试" title="笔试" rel="1">笔试</a>
+    <a href="/tags/#滑动窗口" title="滑动窗口" rel="1">滑动窗口</a>
     
     
     
-    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    <a href="/tags/#BFS" title="BFS" rel="1">BFS</a>
+    
+    
+    
+    <a href="/tags/#贪心 动态规划" title="贪心 动态规划" rel="1">贪心 动态规划</a>
     
     
   </div>
@@ -1112,24 +1136,24 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
 <div class="widget">
   <ul>
     
+    <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+      <li>服务器搭建过程中遇到的数据库问题</li>
+    </a>
+    
+    <a href="../../%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+      <li>贪心与动态规划</li>
+    </a>
+    
+    <a href="../../%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF%EF%BC%9ABFS%E5%92%8CDFS%E9%97%AE%E9%A2%98/">
+      <li>算法模板：BFS和DFS问题</li>
+    </a>
+    
     <a href="../../Docker%E4%B8%8E%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
       <li>Docker与微服务小记</li>
     </a>
     
     <a href="../../%E4%BC%81%E4%B8%9A%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">
       <li>企业开发中遇到的常用注解</li>
-    </a>
-    
-    <a href="../../%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
-      <li>回溯问题</li>
-    </a>
-    
-    <a href="../../Git%E5%92%8CRepo%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">
-      <li>Git和Repo项目管理</li>
-    </a>
-    
-    <a href="../../Summary%20of%20written%20test%20questions/">
-      <li>Summary of written test questions</li>
     </a>
     
   </ul>
@@ -1160,7 +1184,7 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/07/">July 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/05/">May 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1172,12 +1196,20 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
 <div class="widget">
   <ul>
     
+    <a href="/categories/#多线程">
+      <li>多线程</li>
+    </a>
+    
     <a href="/categories/#IO">
       <li>IO</li>
     </a>
     
     <a href="/categories/#Maven">
       <li>Maven</li>
+    </a>
+    
+    <a href="/categories/#笔试">
+      <li>笔试</li>
     </a>
     
     <a href="/categories/#Java spring">
@@ -1192,32 +1224,40 @@ cglib动态代理：第三方工具库，通过继承来创建代理对象，继
       <li>Mybatis</li>
     </a>
     
-    <a href="/categories/#索引">
-      <li>索引</li>
-    </a>
-    
     <a href="/categories/#设计模式">
       <li>设计模式</li>
     </a>
     
-    <a href="/categories/#MVCC">
-      <li>MVCC</li>
+    <a href="/categories/#索引">
+      <li>索引</li>
+    </a>
+    
+    <a href="/categories/#操作系统">
+      <li>操作系统</li>
     </a>
     
     <a href="/categories/#MinIO">
       <li>MinIO</li>
     </a>
     
-    <a href="/categories/#多线程">
-      <li>多线程</li>
-    </a>
-    
     <a href="/categories/#Linux">
       <li>Linux</li>
     </a>
     
-    <a href="/categories/#笔试">
-      <li>笔试</li>
+    <a href="/categories/#MVCC">
+      <li>MVCC</li>
+    </a>
+    
+    <a href="/categories/#滑动窗口">
+      <li>滑动窗口</li>
+    </a>
+    
+    <a href="/categories/#BFS">
+      <li>BFS</li>
+    </a>
+    
+    <a href="/categories/#贪心 动态规划">
+      <li>贪心 动态规划</li>
     </a>
     
   </ul>

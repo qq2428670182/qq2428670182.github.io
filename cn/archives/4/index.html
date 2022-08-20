@@ -244,6 +244,19 @@
 
           
           
+          
+          
+          <li>
+            <a href="/archive/">
+              
+              归档
+              
+              
+            </a>
+          </li>
+          
+          
+          
           <li>
             <a href="/about/">
               
@@ -255,23 +268,10 @@
           
           
           
-          
-          
           <li>
             <a href="/categories/">
               
               分类
-              
-              
-            </a>
-          </li>
-          
-          
-          
-          <li>
-            <a href="/archive/">
-              
-              归档
               
               
             </a>
@@ -479,6 +479,161 @@
   <!-- top end -->
   
 
+  <a href="/cn/2021-11-22-SpringMVC处理器方法的返回值/">
+    <h2 class="post-title">
+      SpringMVC处理器方法的返回值
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      SpringMVC处理器方法的返回值
+1）ModelAndView：传递数据并且跳转到其他资源（视图），对视图进行forward，如果有多余的部分则该该返回值不合适
+2）String：表示视图，可以逻辑名称，也可以是完整视图路径，逻辑名称需要配置视图解析器，可以直接在方法中return“视图名称”
+3）void：多用于响应ajax请求，不需要返回对象，直接前后端分离动态改变
+
+处理ajax，......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2021-11-21
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java SpringMVC" title="Java SpringMVC">Java SpringMVC</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2021-11-08-Spring_AOP/">
+    <h2 class="post-title">
+      Spring AOP笔记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      AOP（面向切面编程）
+1.动态代理
+实现方式：jdk动态代理。使用jdk中的Proxy，Method，InvocationHander创建代理对象
+此种要求目标类必须实现接口
+cglib动态代理：第三方工具库，通过继承来创建代理对象，继承目标类，创建子类（代理对象），要求目标类不能是final，方法也不能是final，因为final不能被继承或修改
+123456789动态代理的作用：1）在......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2021-11-08
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java Spring" title="Java Spring">Java Spring</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2021-11-20-SpringMVC笔记/">
+    <h2 class="post-title">
+      SpringMVC笔记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Controller：控制器对象，把创建的对象作为控制器使用，并把该对象放入SpringMVC容器中，可以接受请求显示处理结果，当作Servlet来使用，但是使用@Controller注解创建的是一个普通类的对象，不是Servlet，但是SpringMVC赋予了其一些特殊功能
+中央调度器：DispatcherServlet是SpringMvc中的一个Servlet对象，负责接收用户的所有请求......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2021-11-08
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Java SpringMVC" title="Java SpringMVC">Java SpringMVC</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/2021-11-03-Markdown快速入门/">
+    <h2 class="post-title">
+      Markdown快速入门
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Markdown快速入门
+代码块：
+在英文状态下输入三个漂号，自动转换为代码块,注意要在格式符号和被操作字符之间加一个空格
+12​``` java​```python
+
+标题：
+1234标题分从大到小分6级，每一级多加一个## 1## 2### 3
+1
+2
+3
+
+字体修饰
+12345678//加粗**加粗字体**//代码高亮显示(要在偏好中进行设置)==高亮代码==//删除线~~被删除文字~......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2021-11-03
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Markdown" title="Markdown">Markdown</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/2021-10-31-MYSQL/">
     <h2 class="post-title">
       MYSQL重点知识点梳理
@@ -487,10 +642,11 @@
       
     </h3>
     <div class="post-content-preview">
-      MYSQL重点知识点梳理distinct:对查询结果进行去重，写在字段前面，mysql默认不区分大小写
+      MYSQL重点知识点梳理
+distinct:对查询结果进行去重，写在字段前面，mysql默认不区分大小写
 order by：按某字段进行排序，asc为顺序，多个字段或多个顺序规则，使用逗号分隔，当然先按后面条件的前面的顺序进行排序
 where查询要确定要查询条件的类型。如果是数字可以直接输，如果是字符串需要加引号
-对查询的字段锁定（规定）在某些数据的话，使用in关键字，当用到多个字段属于并列关......
+对查询的字段锁定（规定）在某些数据的话，使用in关键字，当用到多个字段属于并列......
     </div>
   </a>
   
@@ -523,7 +679,9 @@ where查询要确定要查询条件的类型。如果是数字可以直接输，
       
     </h3>
     <div class="post-content-preview">
-      利用HTML和CSS实现简单的淘宝购物车前端HTML代码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888......
+      利用HTML和CSS实现简单的淘宝购物车前端
+HTML代码：
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878......
     </div>
   </a>
   
@@ -557,9 +715,10 @@ where查询要确定要查询条件的类型。如果是数字可以直接输，
     </h3>
     <div class="post-content-preview">
       1.首先导入所需要的库，这里用到的主要是seleinum
+
 请仔细查看代码注释
 
-12345678910from selenium import webdriver  # 从自动化库里导入这个模块from selenium.webdriver.support.ui import WebDriverWait  # 从模块导入显示等待（隐式，强制）from selenium.webdriver.s......
+12345678910from selenium import webdriver  # 从自动化库里导入这个模块from selenium.webdriver.support.ui import WebDriverWait  # 从模块导入显示等待（隐式，强制）from selenium.webdriver.......
     </div>
   </a>
   
@@ -593,13 +752,20 @@ where查询要确定要查询条件的类型。如果是数字可以直接输，
     </h3>
     <div class="post-content-preview">
       Docker部署项目到服务器上
+
 这里以青龙面板为例，部署青龙面板到服务器的5700端口
 首先自己需要有服务器，公网或内网均可，登录xshell或finalshell
 我这里以Finalshell为例，登录之后为下图
 
 
 
-首先更新下yum源1sudo yum check-update安装docker-fsSL| sh12345sudo systemctl start docker	&#x2F......
+首先更新下yum源
+
+1sudo yum check-update
+
+安装docker
+
+-fsSL| sh12345sudo systemctl start docke......
     </div>
   </a>
   
@@ -668,9 +834,11 @@ where查询要确定要查询条件的类型。如果是数字可以直接输，
       
     </h3>
     <div class="post-content-preview">
-      对称加密：加密和解密使用的是同一个密钥，计算量小，常见的DES、AES
+      对称加密：
+加密和解密使用的是同一个密钥，计算量小，常见的DES、AES
 12345优点：计算量小，简单快速，适合于对海量数据进行加密处理；缺点：加密人和解密人需要拥有同一把秘钥，那秘钥如果通过 不安全的通道进行传输，就存在被黑客窃听的风险，安全性丧失；            同时双方还需要好好管理秘钥，不能泄露秘钥，否则也不安全了，管理秘钥成本较高。
-非对称加密：需要公钥和私钥，公钥对数据进......
+非对称加密：
+需要公钥和私钥，公钥对数......
     </div>
   </a>
   
@@ -681,151 +849,6 @@ where查询要确定要查询条件的类型。如果是数字可以直接输，
   <div class="tags">
     
     <a href="/tags/#加密算法" title="加密算法">加密算法</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2022-03-22-移动端开发之页面静态化 - 副本/">
-    <h2 class="post-title">
-      移动端开发之页面静态化.
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      使用Freemarker在pom中加依赖创建模板文件（模板文件中有四种元素）：123456789101.文本，直接输出2.注释，不会输出3.插值表达式，即$&#123;&#125;，使用数据模型中的部分代替输出4.freemarker指令，名字前面加#予以区分，不输出FreeMarker文件后缀名为ftl
-Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-03-22
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ">Spring RabbitMQ</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2022-03-21-Dubbo快速入门/">
-    <h2 class="post-title">
-      Dubbo快速入门
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Dubbo整合Spring：在xml配置文件中声明Dubbo的配置项
-整合SpringBoot的配置项的名称与Spring中一致，区别是导入starter之后位置不同，直接在配置文件中写就可以
-服务提供方的XML配置项,具体配置标签的属性：1.指定当前服务/应用的名称()
-2.指定注册中心位置（）
-3.指定通信规则，duboo支持多种通信协议，一般建议使用dubbo协议
-
- 即在dubbo:......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-03-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Dubbo" title="Dubbo">Dubbo</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/2022-03-10-SSM项目Curd过程中出现的问题/">
-    <h2 class="post-title">
-      SSM医疗后台Curd过程中出现的问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      代码为传智博客医疗项目，代码在我Github我在测试Curd时总结了所有报错的情况，研究了大半天终于修好了，总结一下：
-1.新建窗口点确定后无响应，开发者工具显示add.do请求404，在RequestMapping路径正常的情况下，首先检查Controller（讲义的代码中Controller的RequestMapping默认不修改就是正确的），其次如果自己建的项目包不是com.ithei......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2021-03-07
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ">Spring RabbitMQ</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Java 多线程/">
-    <h2 class="post-title">
-      Java 多线程
-    </h2>
-    <h3 class="post-subtitle">
-      Java 多线程
-    </h3>
-    <div class="post-content-preview">
-      线程池
-总体来说，线程池有如下的优势：
-（1）降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。
-（2）提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。
-（3）提高线程的可管理性。线程是稀缺资源，如果无限制的创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一的分配，调优和监控。
-线程池的真正实现类是 ThreadPoolExecuto......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2020-08-05
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#多线程" title="多线程">多线程</a>
     
   </div>
   
@@ -885,11 +908,11 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
   <div class="tags">
     
     
-    <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
-    
-    
-    
     <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
+    
+    
+    
+    <a href="/tags/#python,爬虫" title="python,爬虫" rel="1">python,爬虫</a>
     
     
     
@@ -917,15 +940,15 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
     
     
     
-    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
-    
-    
-    
     <a href="/tags/#SpringMVC" title="SpringMVC" rel="1">SpringMVC</a>
     
     
     
     <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
+    
+    
+    
+    <a href="/tags/#SpringBoot RESTFUL" title="SpringBoot RESTFUL" rel="1">SpringBoot RESTFUL</a>
     
     
     
@@ -937,11 +960,11 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
     
     
     
-    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ" rel="3">Spring RabbitMQ</a>
-    
-    
-    
     <a href="/tags/#Spring quarrz task" title="Spring quarrz task" rel="1">Spring quarrz task</a>
+    
+    
+    
+    <a href="/tags/#Spring RabbitMQ" title="Spring RabbitMQ" rel="3">Spring RabbitMQ</a>
     
     
     
@@ -953,6 +976,14 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
     
     
     
+    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    
+    
+    
+    <a href="/tags/#多线程" title="多线程" rel="2">多线程</a>
+    
+    
+    
     <a href="/tags/#IO" title="IO" rel="1">IO</a>
     
     
@@ -961,7 +992,15 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
     
     
     
+    <a href="/tags/#笔试" title="笔试" rel="1">笔试</a>
+    
+    
+    
     <a href="/tags/#Java spring" title="Java spring" rel="1">Java spring</a>
+    
+    
+    
+    <a href="/tags/#注解" title="注解" rel="2">注解</a>
     
     
     
@@ -973,23 +1012,19 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
     
     
     
-    <a href="/tags/#索引" title="索引" rel="1">索引</a>
-    
-    
-    
     <a href="/tags/#设计模式" title="设计模式" rel="1">设计模式</a>
     
     
     
-    <a href="/tags/#MVCC" title="MVCC" rel="1">MVCC</a>
+    <a href="/tags/#索引" title="索引" rel="1">索引</a>
+    
+    
+    
+    <a href="/tags/#操作系统" title="操作系统" rel="1">操作系统</a>
     
     
     
     <a href="/tags/#MinIO" title="MinIO" rel="1">MinIO</a>
-    
-    
-    
-    <a href="/tags/#多线程" title="多线程" rel="1">多线程</a>
     
     
     
@@ -1001,15 +1036,19 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
     
     
     
-    <a href="/tags/#Git" title="Git" rel="1">Git</a>
+    <a href="/tags/#MVCC" title="MVCC" rel="1">MVCC</a>
     
     
     
-    <a href="/tags/#笔试" title="笔试" rel="1">笔试</a>
+    <a href="/tags/#滑动窗口" title="滑动窗口" rel="1">滑动窗口</a>
     
     
     
-    <a href="/tags/#注解" title="注解" rel="2">注解</a>
+    <a href="/tags/#BFS" title="BFS" rel="1">BFS</a>
+    
+    
+    
+    <a href="/tags/#贪心 动态规划" title="贪心 动态规划" rel="1">贪心 动态规划</a>
     
     
   </div>
@@ -1099,24 +1138,24 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
 <div class="widget">
   <ul>
     
+    <a href="../../%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+      <li>服务器搭建过程中遇到的数据库问题</li>
+    </a>
+    
+    <a href="../../%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+      <li>贪心与动态规划</li>
+    </a>
+    
+    <a href="../../%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF%EF%BC%9ABFS%E5%92%8CDFS%E9%97%AE%E9%A2%98/">
+      <li>算法模板：BFS和DFS问题</li>
+    </a>
+    
     <a href="../../Docker%E4%B8%8E%E5%BE%AE%E6%9C%8D%E5%8A%A1/">
       <li>Docker与微服务小记</li>
     </a>
     
     <a href="../../%E4%BC%81%E4%B8%9A%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3/">
       <li>企业开发中遇到的常用注解</li>
-    </a>
-    
-    <a href="../../%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
-      <li>回溯问题</li>
-    </a>
-    
-    <a href="../../Git%E5%92%8CRepo%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">
-      <li>Git和Repo项目管理</li>
-    </a>
-    
-    <a href="../../Summary%20of%20written%20test%20questions/">
-      <li>Summary of written test questions</li>
     </a>
     
   </ul>
@@ -1147,7 +1186,7 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/07/">July 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/05/">May 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../../archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1159,12 +1198,20 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
 <div class="widget">
   <ul>
     
+    <a href="/categories/#多线程">
+      <li>多线程</li>
+    </a>
+    
     <a href="/categories/#IO">
       <li>IO</li>
     </a>
     
     <a href="/categories/#Maven">
       <li>Maven</li>
+    </a>
+    
+    <a href="/categories/#笔试">
+      <li>笔试</li>
     </a>
     
     <a href="/categories/#Java spring">
@@ -1179,32 +1226,40 @@ Freemarker指令4.1 assign指令assign指令用于在页面上定义一个变...
       <li>Mybatis</li>
     </a>
     
-    <a href="/categories/#索引">
-      <li>索引</li>
-    </a>
-    
     <a href="/categories/#设计模式">
       <li>设计模式</li>
     </a>
     
-    <a href="/categories/#MVCC">
-      <li>MVCC</li>
+    <a href="/categories/#索引">
+      <li>索引</li>
+    </a>
+    
+    <a href="/categories/#操作系统">
+      <li>操作系统</li>
     </a>
     
     <a href="/categories/#MinIO">
       <li>MinIO</li>
     </a>
     
-    <a href="/categories/#多线程">
-      <li>多线程</li>
-    </a>
-    
     <a href="/categories/#Linux">
       <li>Linux</li>
     </a>
     
-    <a href="/categories/#笔试">
-      <li>笔试</li>
+    <a href="/categories/#MVCC">
+      <li>MVCC</li>
+    </a>
+    
+    <a href="/categories/#滑动窗口">
+      <li>滑动窗口</li>
+    </a>
+    
+    <a href="/categories/#BFS">
+      <li>BFS</li>
+    </a>
+    
+    <a href="/categories/#贪心 动态规划">
+      <li>贪心 动态规划</li>
     </a>
     
   </ul>
