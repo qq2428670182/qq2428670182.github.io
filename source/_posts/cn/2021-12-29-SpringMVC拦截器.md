@@ -11,7 +11,7 @@ springmvc使用的是统一的全局的异常处理机制
 
 把crontroller中的所有异常集中处理，采用aop的思想
 
-
+---
 
 使用两个注解：
 
@@ -33,9 +33,7 @@ springmvc使用的是统一的全局的异常处理机制
 
 形参Expection表示crontroller中抛出的异常对象，由它可以获取异常信息
 
-
-
-
+---
 
 拦截器：
 
@@ -47,3 +45,13 @@ springmvc使用的是统一的全局的异常处理机制
 
 拦截器是全局的，可以对多个crontroller进行拦截，过滤器是用来过滤请求参数，设置编码字符集等等
 
+---
+
+##### Controller和Handler有什么区别
+
+一般来说，Controller是Handler，但Handler不一定是Controller。
+
+例如，HttpRequestHandler，WebRequestHandler，MessageHandler都是可以使用DispatcherServlet的处理程序。 （（@）Controller是执行Web请求并返回视图的处理程序。）
+
+
+简而言之，Handler只是一个术语，它不是一个类或接口。 它可以执行映射。
