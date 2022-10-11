@@ -487,7 +487,10 @@
       关于SpringClassLoader的一些思考
     </h3>
     <div class="post-content-preview">
-      关于SpringClassLoader的一些思考看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactories......
+      关于SpringClassLoader的一些思考
+看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的
+看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader
+看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactor......
     </div>
   </a>
   
