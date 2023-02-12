@@ -138,10 +138,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://www.sfhjavaer.tech/cn/企业开发中遇到的常用注解/">
+  <link rel="canonical" href="http://www.sfhjavaer.tech/undefined/IDEA之Bean报红问题的分析与解决/">
   <title>
     
-      企业开发中遇到的常用注解 - 一入Java深似海
+      IDEA之Bean报红问题的分析与解决 - 一入Java深似海
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -238,7 +238,7 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">首页</a>
+            <a href="/">HOME</a>
           </li>
 
           
@@ -248,7 +248,7 @@
           <li>
             <a href="/about/">
               
-              关于
+              ABOUT
               
               
             </a>
@@ -259,7 +259,7 @@
           <li>
             <a href="/archive/">
               
-              归档
+              ARCHIVES
               
               
             </a>
@@ -270,7 +270,7 @@
           <li>
             <a href="/categories/">
               
-              分类
+              CATEGORIES
               
               
             </a>
@@ -281,7 +281,7 @@
           <li>
             <a href="/tags/">
               
-              标签
+              TAGS
               
               
             </a>
@@ -292,7 +292,7 @@
           
           <li>
             <a class="popup-trigger">
-              <span class="search-icon"></span>搜索</a>
+              <span class="search-icon"></span>SEARCH</a>
           </li>
           
 
@@ -388,14 +388,12 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#注解" title="注解">注解</a>
-              
             </div>
-            <h1>企业开发中遇到的常用注解</h1>
+            <h1>IDEA之Bean报红问题的分析与解决</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Futari on
-              2022-07-07
+              2023-02-12
             </span>
 
 
@@ -403,11 +401,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">8</span> Minutes
+              Estimated Reading Time <span class="post-count">1</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">2k</span> In Total
+              Words <span class="post-count">460</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -469,72 +467,26 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h4 id="Builder实现建造者模式">@Builder实现建造者模式</h4>
-<h5 id="建造者模式。简单来说，就是一步步创建一个对象，它对用户屏蔽了里面构建的细节，但却可以精细地控制对象的构造过程，而不是一次性的完成对象构建。"><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F&amp;spm=1001.2101.3001.7020">建造者模式</a>。简单来说，就是一步步创建一个对象，它对用户屏蔽了里面构建的细节，但却可以精细地控制对象的构造过程，而不是一次性的完成对象构建。</h5>
-<h6 id="这个注解提供了一种优雅的编程方式，用来创建对象，原理上通过以下来实现">这个注解提供了一种优雅的编程方式，用来创建对象，原理上通过以下来实现</h6>
-<h6 id="（Ps：父类的属性不能产于builder）">（Ps：父类的属性不能产于builder）</h6>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Builder</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> finalVal = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>经过编译之后的字节码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> finalVal = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    Demo(String name, <span class="keyword">int</span> age) &#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//生成了一个静态的builder()和一个静态内部类</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Demo.<span class="function">DemoBuilder <span class="title">builder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Demo.DemoBuilder();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoBuilder</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">        DemoBuilder() &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> Demo.<span class="function">DemoBuilder <span class="title">name</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> Demo.<span class="function">DemoBuilder <span class="title">age</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.age = age;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Demo <span class="title">build</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Demo(<span class="keyword">this</span>.name, <span class="keyword">this</span>.age);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            String var10000 = <span class="keyword">this</span>.name;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>因此我们构造一个对象就可以优雅的这么来：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	<span class="comment">//不用写内部类的类名，直接外部类就能调</span></span><br><span class="line">       Demo demo = Demo.builder().name(<span class="string">&quot;aa&quot;</span>).age(<span class="number">10</span>).build();</span><br><span class="line">       System.out.println(demo); </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>里面有一些自定义参数，我表示，完全没有必要去自定义。直接调用@Builder.Default用默认</p>
-<p>也就是在声明时就指定默认值(=)，如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Builder</span>.Default</span><br><span class="line"><span class="keyword">private</span> DeviceType deviceType=DeviceType.ANDROID;</span><br></pre></td></tr></table></figure>
-<h4 id="WebFilter配置Servlet过滤器（不是拦截器，两者不同）">@WebFilter配置Servlet过滤器（不是拦截器，两者不同）</h4>
-<p>先搞清楚两者的区别，拦截器是实现接口之后并添加到拦截器集合中才会生效，Interceptor是Aop的一种实现方式，依赖于web框架，在底层是基于<strong>Java反射机制</strong>的，在访问前或者访问后加入某些操作，也就是实现了解耦合。</p>
-<h6 id="而过滤器Filter是基于Servlet的，一般是对请求进行一些过滤操作，想想之前的项目，Interceptor一般是为了控制用户的访问资源路径，而Filter一般是对字符进行过滤、修改HttpServletRequest的一些参数。">而过滤器Filter是基于Servlet的，一般是对请求进行一些过滤操作，想想之前的项目，Interceptor一般是为了控制用户的访问资源路径，而Filter一般是对字符进行过滤、修改HttpServletRequest的一些参数。</h6>
-<h6 id="Filter并不能处理用户请求，主要是对httpServletRequest进行预处理，也可以对HttpServletResponse-进行后处理，是个典型的处理链。">Filter并不能处理用户请求，主要是对httpServletRequest进行预处理，也可以对HttpServletResponse 进行后处理，是个典型的处理链。</h6>
-<p><img src="https://s2.loli.net/2022/07/19/SUsuIDvJ9nX7mtP.png" alt="screenShot.png"></p>
-<h4 id="总结区别">总结区别</h4>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1、拦截器是基于java的反射机制的，而过滤器是基于函数回调。</span><br><span class="line">2、拦截器不依赖与servlet容器，过滤器依赖与servlet容器。</span><br><span class="line">3、拦截器只能对Controller请求起作用，而过滤器则可以对几乎所有的请求起作用。</span><br><span class="line">作用范围上的区别只是一部分，最主要的是在操作的区别，拦截器在自己的拦截范围内加入操作，而Filter是对自己范围内的请求进行或者过滤，不是聚焦于增加业务和解耦上。</span><br><span class="line">4、拦截器可以访问Controller上下文、值栈里的对象，而过滤器不能访问。</span><br><span class="line">5、在Controller的生命周期中，拦截器可以多次被调用，而过滤器只能在容器初始化时被调用一次(之后都是经过Filter方法进行过滤)。</span><br><span class="line">6、拦截器可以获取IOC容器中的各个bean，而过滤器就不行，这点很重要，在拦截器里注入一个service，可以调用业务逻辑。</span><br></pre></td></tr></table></figure>
-<h5 id="为什么第六条Filter不能注入Service">为什么第六条Filter不能注入Service</h5>
-<h6 id="web容器加载顺序导致，-加载顺序是listener——filter——servlet，当项目启动时，filter先于servlet初始化-init-，-而Spring中默认bean-如-Service-的初始化是在Servlet后进行的，所以会注入失败，找不到相对应的Bean">web容器加载顺序导致， 加载顺序是listener——filter——servlet，当项目启动时，filter先于servlet初始化(init)， 而Spring中默认bean(如@Service)的初始化是在Servlet后进行的，所以会注入失败，找不到相对应的Bean</h6>
-<h5 id="具体实现Filter上要重写filter方法，如下：">具体实现Filter上要重写filter方法，如下：</h5>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)</span> <span class="keyword">throws</span> IOException, ServletException </span>&#123;</span><br><span class="line">        servletContext = servletRequest.getServletContext();</span><br><span class="line">        Integer times = (Integer) servletContext.getAttribute(<span class="string">&quot;times&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">null</span> == times)&#123;</span><br><span class="line">            servletContext.setAttribute(<span class="string">&quot;times&quot;</span>,<span class="number">1</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            servletContext.setAttribute(<span class="string">&quot;times&quot;</span>,++times);</span><br><span class="line">        &#125;</span><br><span class="line">        filterChain.doFilter(servletRequest,servletResponse);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <p>这是一个很细节的问题，一般情况不会注意，其实要理解这种现象为什么会产生。</p>
+<p>现象如下图：</p>
+<p><img src="a068de340a224a43a42b113a0782e01b.png" alt="报错"></p>
+<p>比如作为Dao的Bean爆红线但是可以正常注入运行，我们之前知道了使用@Resource解决，原因就是@Autowired是Spring提供的，他只能检测到Spring本身的类，如果你使用Mybatis而不对Mapper类加上@Dao注解</p>
+<h5 id="那么其实就是没有将类加入到容器中，所以使用JDK提供的-Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用-RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。"><a href="#那么其实就是没有将类加入到容器中，所以使用JDK提供的-Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用-RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。" class="headerlink" title="那么其实就是没有将类加入到容器中，所以使用JDK提供的@Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用@RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。"></a>那么其实就是没有将类加入到容器中，所以使用JDK提供的@Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用@RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。</h5><p>这里涉及到一个注解@RequiedArgsConstructor，该注解最主要的的作用是将加final修饰的属性作为Bean进行IOC注入，注意这是一个Lombok提供的注解，使用该注解默认使用构造器注入，这也是Spring推荐的注入方式，直接不需要手写有参构造方法。</p>
 <blockquote>
-<p>ServletContext是线程上下文，而FilterChain是过滤器执行链（对同一请求的），也就是有多个Filter，会按顺匈奴来执行，调用servletChain.doFilter()代表经过当前过滤器，然后调用下一个对该请求的过滤器，注意：请求完之后请求结果要进行返回，还是要从链的尾端在过滤回链的头，就像函数递归一样</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.bg.filter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebFilter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebFilter(urlPatterns = &quot;*&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FirstFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest request, ServletResponse response,</span></span></span><br><span class="line"><span class="function"><span class="params">                      FilterChain chain)</span></span></span><br><span class="line"><span class="function">         <span class="keyword">throws</span> IOException, ServletException </span>&#123;</span><br><span class="line">     System.out.println(<span class="string">&quot;FirstFilter before&quot;</span>);</span><br><span class="line">     chain.doFilter(request, response);</span><br><span class="line">     System.out.println(<span class="string">&quot;FirstFilter after&quot;</span>);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">FirstFilter before</span><br><span class="line">SecondFilter before</span><br><span class="line">ThreeFilter before</span><br><span class="line">ThreeFilter after</span><br><span class="line">SecondFilter after</span><br><span class="line">FirstFilter after</span><br></pre></td></tr></table></figure>
+<p>@RequiedArgsConstructor适合一个类中调用很多的bean，每一个bean都使用@Autowired修饰很麻烦。</p>
 </blockquote>
-<h2 id="SpringBoot利用-WebFilter配置Filter">SpringBoot利用@WebFilter配置Filter</h2>
-<blockquote>
-<p><strong>第一步：利用@WebFilter创建Filter过滤器类</strong></p>
-<p>（从下面的配置代码可以看到主要方法有三个，和Interceptor数量上是相同的，不过过滤器不是在请求的前中后了，而是这三个方法：在init初始化时方法，doFilter过滤方法，destory（过滤器销毁方法），这三个方法是是在Filter接口中定义的，拦截器是在Interceptor接口中定义的。）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//@Component//无需添加此注解，在启动类添加@ServletComponentScan注解后，会自动将带有@WebFilter的注解进行注入！</span></span><br><span class="line"><span class="meta">@WebFilter(urlPatterns = &quot;/lvjia/carbodyad/api/*&quot;, filterName = &quot;rest0PubFilter&quot;)</span></span><br><span class="line"><span class="meta">@Order(1)</span><span class="comment">//指定过滤器的执行顺序,值越大越靠后执行</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Rest0PubFilter</span> <span class="keyword">implements</span> <span class="title">Filter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="meta">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(FilterConfig filterConfig)</span> </span>&#123;<span class="comment">//初始化过滤器</span></span><br><span class="line">      System.out.println(<span class="string">&quot;getFilterName:&quot;</span>+filterConfig.getFilterName());<span class="comment">//返回&lt;filter-name&gt;元素的设置值。</span></span><br><span class="line">      System.out.println(<span class="string">&quot;getServletContext:&quot;</span>+filterConfig.getServletContext());<span class="comment">//返回FilterConfig对象中所包装的ServletContext对象的引用。</span></span><br><span class="line">      System.out.println(<span class="string">&quot;getInitParameter:&quot;</span>+filterConfig.getInitParameter(<span class="string">&quot;cacheTimeout&quot;</span>));<span class="comment">//用于返回在web.xml文件中为Filter所设置的某个名称的初始化的参数值</span></span><br><span class="line">      System.out.println(<span class="string">&quot;getInitParameterNames:&quot;</span>+filterConfig.getInitParameterNames());<span class="comment">//返回一个Enumeration集合对象。</span></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="meta">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doFilter</span><span class="params">(ServletRequest servletRequest, ServletResponse servletResponse,             </span></span></span><br><span class="line"><span class="function"><span class="params">      FilterChain filterChain)</span> <span class="keyword">throws</span> IOException, ServletException </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">false</span>)&#123;</span><br><span class="line">          response.sendRedirect(<span class="string">&quot;http://localhost:8081/demo/test/login&quot;</span>);<span class="comment">//重定向</span></span><br><span class="line">      &#125;</span><br><span class="line">      filterChain.doFilter(servletRequest, servletResponse);<span class="comment">//doFilter将请求转发给过滤器链下一个filter , 如果没有filter那就是你请求的资源</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="meta">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<img src="https://s2.loli.net/2022/07/19/Aj9HwIkWhoCYGFp.png" alt="screenShot.png"  />
-<p>注意：</p>
-<blockquote>
-<p>@WebFilter(urlPatterns = “/lvjia/carbodyad/api/*”, filterName = “rest0PubFilter”)<br>
-filterName(命名)的首字母一定要小写！！！小写！！！小写！！！<br>
-我因为这个，导致配置的多个过滤器拦截url都失效了！不管啥路径，全给我拦截到Filter里去了</p>
-</blockquote>
-<blockquote>
-<p>第二步;Application启动类添加@ServletComponentScan注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@ServletComponentScan</span>   <span class="comment">//Servlet、Filter、Listener 可以直接通过 @WebServlet、@WebFilter、@WebListener 注解自动注册，无需其他代码。</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		SpringApplication.run(Application.class, args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h6 id="Filter的优先级比Servlet高，通过FilterChain来进行到chain的下一个过滤器，在服务启动时组合链条，所以符合责任链模式。">Filter的优先级比Servlet高，通过FilterChain来进行到chain的下一个过滤器，在服务启动时组合链条，所以符合责任链模式。</h6>
-<h5 id="责任链和普通的链肯定是不一样的">责任链和普通的链肯定是不一样的</h5>
-<p>责任链执行只需要获取到第一个节点就能开始执行，所以必须是链表形式关联的，一个个地执行不一定算责任链，需要有关联关系，所以手动new各个handler然后一个个调方法不是责任链。</p>
-<h6 id="并且链上的任务的数量应该是便于修改的，并且顺序也应该是可以修改的，所以我们应该让handler的下一个handler的引用应该是相同的，所以我们需要一个抽象类。请求者也不需要知道后台执行链如何进行处理，每一个处理对象只需要负责自己的任务就好，其他的交给next节点。">并且链上的任务的数量应该是便于修改的，并且顺序也应该是可以修改的，所以我们应该让handler的下一个handler的引用应该是相同的，所以我们需要一个抽象类。请求者也不需要知道后台执行链如何进行处理，每一个处理对象只需要负责自己的任务就好，其他的交给next节点。</h6>
-<blockquote>
-<p>在一般的网关中，都会经过 API 接口限流、黑名单拦截、用户会话、参数过滤等这么几个关键点，那么原理是不是相当于Filter呢？能不能使用责任链来进行实现</p>
-</blockquote>
-<h5 id="说白了责任链模式有什么用呢？">说白了责任链模式有什么用呢？</h5>
-<p>其实就是将请求与多个处理模块解耦合，仅仅像链条一样，只需要指出入口，不再关心之后如何处理以及处理的整个过程。</p>
+<h4 id="那么为什么4-0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？"><a href="#那么为什么4-0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？" class="headerlink" title="那么为什么4.0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？"></a>那么为什么4.0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？</h4><p>原因是@Autowired可能会产生循环依赖并且多Bean注入不美观。</p>
+<p>构造器注入可以保证完全初始化，保证这个注入的Bean一定不是空的，因为调用有参构造不传入参数会报错，Bean加final修饰保证Bean的不可变，只需要写一个有参构造就可以了，注意被注入的属性也就是Bean，是把Bean注入到了当前类。</p>
+<p>Setter同样在很多属性的时候，会显得非常的冗余写很多的构造器。</p>
 
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
-          <li class="previous">
-            <a href="/cn/Docker与微服务/" data-toggle="tooltip" data-placement="top" title="Docker与微服务小记">&larr; Previous Post</a>
-          </li>
-          
           
           <li class="next">
-            <a href="/cn/回溯算法/" data-toggle="tooltip" data-placement="top" title="回溯问题">Next Post &rarr;</a>
+            <a href="/cn/景区抢票平台爬虫以及对美团的破解思路/" data-toggle="tooltip" data-placement="top" title="景区抢票平台爬虫以及对美团的破解思路">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -546,7 +498,7 @@ filterName(命名)的首字母一定要小写！！！小写！！！小写！�
 <div class="tip">
   <p>
     
-      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+      If you like this blog or find it useful for you, you are welcome to comment on it. You are also welcome to share this blog, so that more people can participate in it. If the images used in the blog infringe your copyright, please contact the author to delete them. Thank you !
     
   </p>
 </div>
@@ -583,7 +535,7 @@ filterName(命名)的首字母一定要小写！！！小写！！！小写！�
       </a>
     </li>
     <li class="social-share-li">
-      <a target="_blank" class="social-share-icon" href="mailto:?subject=企业开发中遇到的常用注解&body=Hi,I found this website and thought you might like it http://www.sfhjavaer.tech/cn/企业开发中遇到的常用注解/">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=IDEA之Bean报红问题的分析与解决&body=Hi,I found this website and thought you might like it http://www.sfhjavaer.tech/undefined/IDEA之Bean报红问题的分析与解决/">
         <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
       </a>
     </li>
@@ -639,7 +591,7 @@ filterName(命名)的首字母一定要小写！！！小写！！！小写！�
     }
 
     const gitment = new Gitment({
-      id: 'Thu Jul 07 2022 00:00:00 GMT+0800', // optional
+      id: 'Sun Feb 12 2023 21:57:41 GMT+0800', // optional
       owner: 'SFHJavaer',
       repo: 'SFHJavaer',
       oauth: {
@@ -671,6 +623,17 @@ filterName(命名)的首字母一定要小写！！！小写！！！小写！�
       <!-- Catalog: Tabe of Content -->
       <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E9%82%A3%E4%B9%88%E5%85%B6%E5%AE%9E%E5%B0%B1%E6%98%AF%E6%B2%A1%E6%9C%89%E5%B0%86%E7%B1%BB%E5%8A%A0%E5%85%A5%E5%88%B0%E5%AE%B9%E5%99%A8%E4%B8%AD%EF%BC%8C%E6%89%80%E4%BB%A5%E4%BD%BF%E7%94%A8JDK%E6%8F%90%E4%BE%9B%E7%9A%84-Resource%EF%BC%8C%E5%B0%B1%E7%9B%B8%E5%BD%93%E4%BA%8E%E6%A3%80%E6%9F%A5%E4%B8%8D%E5%87%BA%E6%9D%A5%E4%BA%86%EF%BC%8C%E5%B0%A4%E5%85%B6%E4%B8%8D%E6%8E%A8%E8%8D%90%E5%9C%A8Setting%E5%85%B3%E9%97%AD%E6%A3%80%E6%9F%A5%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8-RequiredAutowired%E5%BF%BD%E7%95%A5%E5%8F%82%E6%95%B0%E6%A3%80%E6%9F%A5%EF%BC%8C%E5%BD%93%E7%84%B6%E8%BF%99%E6%A0%B7%E5%A6%82%E6%9E%9CBean%E4%B8%BA%E7%A9%BA%E5%B0%B1%E4%BC%9A%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E6%8A%A5%E9%94%99%E4%BA%86%E3%80%82"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">那么其实就是没有将类加入到容器中，所以使用JDK提供的@Resource，就相当于检查不出来了，尤其不推荐在Setting关闭检查，也可以使用@RequiredAutowired忽略参数检查，当然这样如果Bean为空就会在运行时报错了。</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E9%82%A3%E4%B9%88%E4%B8%BA%E4%BB%80%E4%B9%884-0%E4%B9%8B%E5%90%8E%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%9E%84%E9%80%A0%E5%99%A8%E6%B3%A8%E5%85%A5%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%9F%E8%80%8C%E4%B8%8D%E6%98%AFAutowired%E6%B3%A8%E8%A7%A3%E6%B3%A8%E5%85%A5%E6%88%96%E8%80%85setter%E6%B3%A8%E5%85%A5%EF%BC%9F"><span class="toc-nav-number"></span> <span class="toc-nav-text">那么为什么4.0之后推荐使用构造器注入的方式？而不是Autowired注解注入或者setter注入？</span></a>
+        
+        </div>
+      </aside>
+    
+
 
 
       <!-- Sidebar Container -->
@@ -684,11 +647,9 @@ filterName(命名)的首字母一定要小写！！！小写！！！小写！�
         <section>
           <!-- no hr -->
           <h5>
-            <a href="/tags/">特色标签</a>
+            <a href="/tags/">FEATURED TAGS</a>
           </h5>
           <div class="tags">
-            
-            <a class="tag" href="/tags/#注解" title="注解">注解</a>
             
           </div>
         </section>
@@ -697,7 +658,7 @@ filterName(命名)的首字母一定要小写！！！小写！！！小写！�
         <!-- Friends Blog -->
         
         <hr>
-        <h5>链友</h5>
+        <h5>FRIENDS</h5>
         <ul class="list-inline">
 
           
@@ -836,7 +797,7 @@ filterName(命名)的首字母一定要小写！！！小写！！！小写！�
         <p class="copyright text-muted">
           Copyright &copy;
           SFHJavaer
-          2022
+          2023
           <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -962,7 +923,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>

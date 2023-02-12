@@ -138,7 +138,7 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://www.sfhjavaer.tech/cn/">
+  <link rel="canonical" href="http://www.sfhjavaer.tech/archives/2023/02/">
   <title>
     
       一入Java深似海
@@ -238,7 +238,7 @@
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="/">首页</a>
+            <a href="/">HOME</a>
           </li>
 
           
@@ -248,7 +248,7 @@
           <li>
             <a href="/about/">
               
-              关于
+              ABOUT
               
               
             </a>
@@ -259,7 +259,7 @@
           <li>
             <a href="/archive/">
               
-              归档
+              ARCHIVES
               
               
             </a>
@@ -270,7 +270,7 @@
           <li>
             <a href="/categories/">
               
-              分类
+              CATEGORIES
               
               
             </a>
@@ -281,7 +281,7 @@
           <li>
             <a href="/tags/">
               
-              标签
+              TAGS
               
               
             </a>
@@ -292,7 +292,7 @@
           
           <li>
             <a class="popup-trigger">
-              <span class="search-icon"></span>搜索</a>
+              <span class="search-icon"></span>SEARCH</a>
           </li>
           
 
@@ -304,12 +304,12 @@
 <li>
   <a id="lang-select-label"><i class="fa fa-globe"></i>
     <span>
-      简体中文
+      English
     </span>
-    <select id="lang-select" data-canonical="cn/index.html">
+    <select id="lang-select" data-canonical="archives/2023/02/index.html">
       
       
-      <option value="cn"  selected >
+      <option value="cn" >
         简体中文
       </option>
       
@@ -383,9 +383,9 @@
     }
 
     header.intro-header {
-       /*config*/
-        background-image: var(--intro-header-background-image-url-home);
-        /* background-image: url('/img/header_img/newhome_bg.jpg'); */
+       /*page*/
+        background-image: var(--intro-header-background-image-url-page);
+        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
       
     }
 
@@ -467,384 +467,704 @@
             ">
 
       <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
+      <!-- 归档列表 -->
 
-
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/景区抢票平台爬虫以及对美团的破解思路/">
-    <h2 class="post-title">
-      景区抢票平台爬虫以及对美团的破解思路
-    </h2>
-    <h3 class="post-subtitle">
       
-    </h3>
-    <div class="post-content-preview">
-      严禁用于非法用途，本教程仅供交流使用
-为了维护商家权益，关键信息会进行打码处理，严禁用于非法用途
-PS：文中接口再2022年7月已失效1.寻找景区链接首先打开微信公众号中的我们的订单页面，url为
-https://wap.lotsmall.cn/vue/order/list?type=finished&amp;m_id=1954
-进入到页面我们自动跳转会发现是商铺的登录界面，需要重新进行登录......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2022-12-17
-  </p>
-  <div class="tags">
-    
-  </div>
-  
 
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/对Process构建的思考和项目调试中的理解与问题/">
-    <h2 class="post-title">
-      对Process构建的思考和项目调试中的理解与问题
-    </h2>
-    <h3 class="post-subtitle">
+      <!-- 归档列表 -->
       
-    </h3>
-    <div class="post-content-preview">
-      对Process构建的思考和项目调试中的理解与问题在项目接口测试中，请求体中的数据不能在param添加，因为不是@RequestParam的，要根据接口进行提交，选择的请求体类型一般是x-www-form-urlencoded或者是Json，前者一般是from表单的请求体，后者是一般的json通用请求类型一个联调安卓端的小问题：安装完adb和aapt之后，配置环境变量，在项目中可以通过JDK......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-09-16
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#项目" title="项目">项目</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/关于SpringClassLoader的一些思考/">
-    <h2 class="post-title">
-      关于SpringClassLoader的一些思考
-    </h2>
-    <h3 class="post-subtitle">
-      关于SpringClassLoader的一些思考
-    </h3>
-    <div class="post-content-preview">
-      关于SpringClassLoader的一些思考
-看了Tomcat我以为只要没打破双亲委派机制的就是jvm的类加载机制appclassLoader，其实是没关系的
-看了spring之后我觉得springboot肯定是自定义加载器，刚才试了几个bean类获取了下发现是AppClassLoader
-看springboot自动装配源码发现在扫factory文件的时候使用的是SpringFactor......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-09-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Spring" title="Spring">Spring</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/服务器搭建过程中遇到的问题/">
-    <h2 class="post-title">
-      服务器搭建过程中遇到的数据库问题
-    </h2>
-    <h3 class="post-subtitle">
-      Linux搭建过程中的Mysql问题
-    </h3>
-    <div class="post-content-preview">
-      服务器搭建过程中遇到的问题
-最近在维护之前的项目的时候，发现数据库意外连接不上，mysql显示后台运行，但是输入mysql -uroot -p却显示不能连接到sock文件
-
-ERROR 2002 (HY000): Can’t connect to local MySQL server through socket ‘/var/run/mysqld/mysqld.sock’
-
-最初查网上的解法......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-08-11
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Linux" title="Linux">Linux</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/贪心和动态规划/">
-    <h2 class="post-title">
-      贪心与动态规划
-    </h2>
-    <h3 class="post-subtitle">
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2023">
+          <span class="tag-text">2023</span>
+        </span>
+        <ul>
+          
+          <li>
+            02-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/IDEA之Bean报红问题的分析与解决/" style="color: #0085a1">
+              <span>
+                IDEA之Bean报红问题的分析与解决
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
       
-    </h3>
-    <div class="post-content-preview">
-      贪心例题：跳跃游戏
-题干：    给定一个非负整数数组，假定你的初始位置为数组第一个下标，数组中的每个元素代表你在那个位置能够跳跃的最大长度，请确认你是否能够跳跃到数组的最后一个下标。
-
-从起点开始选择第二个，并不是说第一步跳就选最远的，而是寻找一种一定能满足的关系，就像数学归纳法一样，每一步的贪心都能保证最终的结果，所以只有都满足递推关系了才进行贪心。
-所以第一步选最远的那个只是保证了起点......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-08-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#贪心 动态规划" title="贪心 动态规划">贪心 动态规划</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/算法模板：BFS和DFS问题/">
-    <h2 class="post-title">
-      算法模板：BFS和DFS问题
-    </h2>
-    <h3 class="post-subtitle">
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2022">
+          <span class="tag-text">2022</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/景区抢票平台爬虫以及对美团的破解思路/" style="color: #0085a1">
+              <span>
+                景区抢票平台爬虫以及对美团的破解思路
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-16
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/对Process构建的思考和项目调试中的理解与问题/" style="color: #0085a1">
+              <span>
+                对Process构建的思考和项目调试中的理解与问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            09-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于SpringClassLoader的一些思考/" style="color: #0085a1">
+              <span>
+                关于SpringClassLoader的一些思考
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-11
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/服务器搭建过程中遇到的问题/" style="color: #0085a1">
+              <span>
+                服务器搭建过程中遇到的数据库问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/贪心和动态规划/" style="color: #0085a1">
+              <span>
+                贪心与动态规划
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/算法模板：BFS和DFS问题/" style="color: #0085a1">
+              <span>
+                算法模板：BFS和DFS问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Docker与微服务/" style="color: #0085a1">
+              <span>
+                Docker与微服务小记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/undefined/企业开发中遇到的常用注解/" style="color: #0085a1">
+              <span>
+                企业开发中遇到的常用注解
+                
+                -- 
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-04
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/回溯算法/" style="color: #0085a1">
+              <span>
+                回溯问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Git和Repo项目管理/" style="color: #0085a1">
+              <span>
+                Git和Repo项目管理
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-23
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Summary of written test questions/" style="color: #0085a1">
+              <span>
+                Summary of written test questions
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-10
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/算法：链表相加和大数相加/" style="color: #0085a1">
+              <span>
+                算法：链表相加和大数相加
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            06-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/树-算法做题总结/" style="color: #0085a1">
+              <span>
+                树-算法做题总结
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/滑动窗口和双指针/" style="color: #0085a1">
+              <span>
+                滑动窗口和双指针
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/操作系统上的进程与线程/" style="color: #0085a1">
+              <span>
+                操作系统上的进程与线程
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            05-06
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/服务器搭建MinIo环境/" style="color: #0085a1">
+              <span>
+                Linux手动搭建MinIo分布式存储步骤
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-28
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Maven依赖冲突解决方法/" style="color: #0085a1">
+              <span>
+                Maven依赖冲突解决方法
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-17
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于单例设计模式/" style="color: #0085a1">
+              <span>
+                常见单例模式五种设计方式
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-12
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于Mybatis二级缓存/" style="color: #0085a1">
+              <span>
+                关于Mybatis二级缓存
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/正确理解MVCC/" style="color: #0085a1">
+              <span>
+                正确理解MVCC
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于数据库索引/" style="color: #0085a1">
+              <span>
+                关于数据库索引
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-05
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于JVM/" style="color: #0085a1">
+              <span>
+                JVM内存结构的探索
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            04-02
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/关于Mybatis分页的回顾/" style="color: #0085a1">
+              <span>
+                关于Mybatis分页的详细回顾
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-07-简单实现ActiveMQ、RabbitMQ/" style="color: #0085a1">
+              <span>
+                简单实现ActiveMQ、RabbitMQ
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-02
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-02-SpringBoot实现定时任务/" style="color: #0085a1">
+              <span>
+                SpringBoot实现定时任务
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-02-25-SpringBoot高并发秒杀项目实录/" style="color: #0085a1">
+              <span>
+                SpringBoot高并发秒杀
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-25
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-02-25-SpringBoot-整合Jetcache，j2cache/" style="color: #0085a1">
+              <span>
+                SpringBoot-整合Jetcache，j2cache
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-22
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-02-22-ES基本入门操作/" style="color: #0085a1">
+              <span>
+                ES基本入门操作与SpringBoot整合
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            02-09
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-02-09-Redis快速入门/" style="color: #0085a1">
+              <span>
+                Redis学习笔记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-29
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-01-29-SpringBoot开发和运维问题/" style="color: #0085a1">
+              <span>
+                SpringBoot运维测试和配置问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            01-20
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-01-20-SpringBoot-REST风格/" style="color: #0085a1">
+              <span>
+                SpringBoot RESTful风格
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
       
-    </h3>
-    <div class="post-content-preview">
-      BFS和DFS问题
-广度优先遍历是利用队列实现的搜索算法，一层一层的进行递归，典型例题是之字形遍历树和树的层序遍历以及前中后序遍历
-BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），回溯可以理解成是DFS的一种应用，只要是不撞南墙不回头都是DFS。
-应用上：
-123BFS 常用于找单一的最短路线，它的特点是 &quot;搜到就是最优解&quot;而 DFS 用于找所有解的问题，它的......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-07-21
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#BFS" title="BFS">BFS</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Docker与微服务/">
-    <h2 class="post-title">
-      Docker与微服务小记
-    </h2>
-    <h3 class="post-subtitle">
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2021">
+          <span class="tag-text">2021</span>
+        </span>
+        <ul>
+          
+          <li>
+            12-29
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-12-29-SpringMVC拦截器/" style="color: #0085a1">
+              <span>
+                SpringMVC拦截器
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            12-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-12-19-SpringBoot表现层消息一致性处理/" style="color: #0085a1">
+              <span>
+                SpringBoot表现层消息一致性处理
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-11-22-SpringMVC处理器方法的返回值/" style="color: #0085a1">
+              <span>
+                SpringMVC处理器方法的返回值
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-08
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-11-20-SpringMVC笔记/" style="color: #0085a1">
+              <span>
+                SpringMVC笔记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-08
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-11-08-Spring_AOP/" style="color: #0085a1">
+              <span>
+                Spring AOP笔记
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            11-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-11-03-Markdown快速入门/" style="color: #0085a1">
+              <span>
+                Markdown快速入门
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-31
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-10-31-MYSQL/" style="color: #0085a1">
+              <span>
+                MYSQL重点知识点梳理
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-30
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-10-30-HTML CSS/" style="color: #0085a1">
+              <span>
+                利用HTML和CSS实现简单的淘宝购物车前端
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-14
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-10-14-Spider/" style="color: #0085a1">
+              <span>
+                基于搜狗微信的seleinum公众号爬虫
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            10-03
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2021-10-03-Docker搭建项目/" style="color: #0085a1">
+              <span>
+                Docker部署项目到服务器上
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/spring报错：提示找不到mapper文件/" style="color: #0085a1">
+              <span>
+                spring报错：提示找不到mapper文件
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-27
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-25-常见的前端加密方法/" style="color: #0085a1">
+              <span>
+                常见的前端加密方法
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-22
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-22-移动端开发之页面静态化 - 副本/" style="color: #0085a1">
+              <span>
+                移动端开发之页面静态化.
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-21
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-21-Dubbo快速入门/" style="color: #0085a1">
+              <span>
+                Dubbo快速入门
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            03-07
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/2022-03-10-SSM项目Curd过程中出现的问题/" style="color: #0085a1">
+              <span>
+                SSM医疗后台Curd过程中出现的问题
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
       
-    </h3>
-    <div class="post-content-preview">
-      Docker与微服务
-在软件开发的最初是单体架构，那么服务都耦合在一起，进行服务升级、部署都要整体的进行瀑布式的开发模型。
-在发展一段时间后，面向服务架构产生了，也就是我们常用的将服务进行分散，分散到不同的机器上，单独维护某一个服务。所以说面向服务架构也就是分布式，不管是水平拆分还是垂直拆分都算是分布式。
-
-水平拆分的话就像是我们用Dubbo调服务一样，把service层放进一个服务器，请求......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2022-07-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Docker" title="Docker">Docker</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/企业开发中遇到的常用注解/">
-    <h2 class="post-title">
-      企业开发中遇到的常用注解
-    </h2>
-    <h3 class="post-subtitle">
+      <div class="one-tag-list">
+        <span class="fa fa-calendar-times-o listing-seperator" id="2020">
+          <span class="tag-text">2020</span>
+        </span>
+        <ul>
+          
+          <li>
+            08-19
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/近期对多线程的深入理解/" style="color: #0085a1">
+              <span>
+                近期对多线程的深入理解
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            08-05
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Java 多线程/" style="color: #0085a1">
+              <span>
+                Java 多线程中的线程池
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+          <li>
+            07-31
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/cn/Java IO流、集合类重要知识/" style="color: #0085a1">
+              <span>
+                Java IO流
+                
+                -- cn
+                
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
       
-    </h3>
-    <div class="post-content-preview">
-      @Builder实现建造者模式
-建造者模式。简单来说，就是一步步创建一个对象，它对用户屏蔽了里面构建的细节，但却可以精细地控制对象的构造过程，而不是一次性的完成对象构建。
-这个注解提供了一种优雅的编程方式，用来创建对象，原理上通过以下来实现
-（Ps：父类的属性不能产于builder）
-12345678@Builderpublic class Demo &#123;    private fi......
     </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2022-07-07
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#注解" title="注解">注解</a>
-    
   </div>
-  
-
 </div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/回溯算法/">
-    <h2 class="post-title">
-      回溯问题
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      回溯问题
-回溯问题可以理解为树搜索问题，之所以回溯可以剪枝就是基于树的概念，不断的深度遍历到叶子端，然后返回上一节点进行递归（回溯）
-对于回溯的时间复杂度的分析，可能从树的角度不好分析，那么就先找到应该有多少种结果的情况，每一种情况的消耗复杂度（这里均指O的量级复杂度）是多少，最后相乘
-空间复杂度如果没有额外的空间开辟，那么就是树的深度&gt;
-比如：子集问题
-其时间复杂度是O(n*2的n次......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2022-07-04
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#注解" title="注解">注解</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Git和Repo项目管理/">
-    <h2 class="post-title">
-      Git和Repo项目管理
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Git提交问题
-git commit 时可以加 -f代表强制提交，因为对于某些设置的文件是可忽略的，如果要强行提交的话，可以使用上面的命令。
-1git commit -f #强制commit
-忽略提交的文件：比如某些重要的配置文件、或者是测试文件不想被提交的情况。
-Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓库，git目录以及他的下层目录才是可以被识别的，不然凭空的话只会......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by Futari on
-    2022-07-03
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Git" title="Git">Git</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-
-  <!-- Pager -->
-  <ul class="pager">
-    
-    
-    <li class="next">
-      <a href="/cn/archives/2/">下一页 &rarr;</a>
-    </li>
-    
-  </ul>
 
 
       <!-- 如果开启评论功能 -->
@@ -861,7 +1181,7 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
 ">
     
         <!-- Visitors -->
-<h5><a href="/">来访者</a></h5>
+<h5><a href="/">VISITORS</a></h5>
 
 <div class="widget">
   <span>
@@ -879,7 +1199,7 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
         <!-- Featured Tags -->
 
 <section>
-  <h5><a href="/tags/">特色标签</a></h5>
+  <h5><a href="/tags/">FEATURED TAGS</a></h5>
   <div class="tags">
     
     
@@ -1042,7 +1362,7 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
     
         <!-- Short About -->
 <section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
+  <h5><a href="/about/">ABOUT ME</a></h5>
   <div class="short-about">
 
     
@@ -1117,28 +1437,28 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
     
         <!-- RECENT POSTS -->
 
-<h5><a href="/">最近博文</a></h5>
+<h5><a href="/">RECENT POSTS</a></h5>
 <div class="widget">
   <ul>
     
-    <a href="%E6%99%AF%E5%8C%BA%E6%8A%A2%E7%A5%A8%E5%B9%B3%E5%8F%B0%E7%88%AC%E8%99%AB%E4%BB%A5%E5%8F%8A%E5%AF%B9%E7%BE%8E%E5%9B%A2%E7%9A%84%E7%A0%B4%E8%A7%A3%E6%80%9D%E8%B7%AF/">
+    <a href="../../../undefined/IDEA%E4%B9%8BBean%E6%8A%A5%E7%BA%A2%E9%97%AE%E9%A2%98%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%A7%A3%E5%86%B3/">
+      <li>IDEA之Bean报红问题的分析与解决</li>
+    </a>
+    
+    <a href="../../../cn/%E6%99%AF%E5%8C%BA%E6%8A%A2%E7%A5%A8%E5%B9%B3%E5%8F%B0%E7%88%AC%E8%99%AB%E4%BB%A5%E5%8F%8A%E5%AF%B9%E7%BE%8E%E5%9B%A2%E7%9A%84%E7%A0%B4%E8%A7%A3%E6%80%9D%E8%B7%AF/">
       <li>景区抢票平台爬虫以及对美团的破解思路</li>
     </a>
     
-    <a href="%E5%AF%B9Process%E6%9E%84%E5%BB%BA%E7%9A%84%E6%80%9D%E8%80%83%E5%92%8C%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E4%B8%AD%E7%9A%84%E7%90%86%E8%A7%A3%E4%B8%8E%E9%97%AE%E9%A2%98/">
+    <a href="../../../cn/%E5%AF%B9Process%E6%9E%84%E5%BB%BA%E7%9A%84%E6%80%9D%E8%80%83%E5%92%8C%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E4%B8%AD%E7%9A%84%E7%90%86%E8%A7%A3%E4%B8%8E%E9%97%AE%E9%A2%98/">
       <li>对Process构建的思考和项目调试中的理解与问题</li>
     </a>
     
-    <a href="%E5%85%B3%E4%BA%8ESpringClassLoader%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">
+    <a href="../../../cn/%E5%85%B3%E4%BA%8ESpringClassLoader%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">
       <li>关于SpringClassLoader的一些思考</li>
     </a>
     
-    <a href="%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+    <a href="../../../cn/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
       <li>服务器搭建过程中遇到的数据库问题</li>
-    </a>
-    
-    <a href="%E8%B4%AA%E5%BF%83%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-      <li>贪心与动态规划</li>
     </a>
     
   </ul>
@@ -1149,7 +1469,7 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
     
         <!-- Friends Blog -->
 
-<h5><a href="/">链友</a></h5>
+<h5><a href="/">FRIENDS</a></h5>
 <ul class="list-inline">
   
   <li><a href="https://SFHJavaer.github.io/" target="_blank">Futari</a></li>
@@ -1169,7 +1489,7 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="">February 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
@@ -1330,7 +1650,7 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
         <p class="copyright text-muted">
           Copyright &copy;
           SFHJavaer
-          2022
+          2023
           <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
@@ -1456,7 +1776,7 @@ start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </scrip
             <span class="search-icon">
               <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
             </span>
-            <input autocomplete="off" placeholder="搜索..." type="text" id="local-search-input">
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
           </div>
         </div>
         <div id="local-search-result"></div>
