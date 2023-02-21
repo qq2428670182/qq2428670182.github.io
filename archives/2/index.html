@@ -477,6 +477,114 @@
   <!-- top end -->
   
 
+  <a href="/cn/Docker与微服务/">
+    <h2 class="post-title">
+      Docker与微服务小记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      Docker与微服务
+在软件开发的最初是单体架构，那么服务都耦合在一起，进行服务升级、部署都要整体的进行瀑布式的开发模型。
+在发展一段时间后，面向服务架构产生了，也就是我们常用的将服务进行分散，分散到不同的机器上，单独维护某一个服务。所以说面向服务架构也就是分布式，不管是水平拆分还是垂直拆分都算是分布式。
+
+水平拆分的话就像是我们用Dubbo调服务一样，把service层放进一个服务器，请求......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-07-12
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#Docker" title="Docker">Docker</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/企业开发中遇到的常用注解/">
+    <h2 class="post-title">
+      企业开发中遇到的常用注解
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      @Builder实现建造者模式建造者模式。简单来说，就是一步步创建一个对象，它对用户屏蔽了里面构建的细节，但却可以精细地控制对象的构造过程，而不是一次性的完成对象构建。这个注解提供了一种优雅的编程方式，用来创建对象，原理上通过以下来实现（Ps：父类的属性不能产于builder）12345678@Builderpublic class Demo &#123;    private final ......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-07-07
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#注解" title="注解">注解</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/回溯算法/">
+    <h2 class="post-title">
+      回溯问题
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      回溯问题
+回溯问题可以理解为树搜索问题，之所以回溯可以剪枝就是基于树的概念，不断的深度遍历到叶子端，然后返回上一节点进行递归（回溯）
+对于回溯的时间复杂度的分析，可能从树的角度不好分析，那么就先找到应该有多少种结果的情况，每一种情况的消耗复杂度（这里均指O的量级复杂度）是多少，最后相乘
+空间复杂度如果没有额外的空间开辟，那么就是树的深度&gt;
+比如：子集问题
+其时间复杂度是O(n*2的n次......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Futari on
+    2022-07-04
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#注解" title="注解">注解</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/Git和Repo项目管理/">
     <h2 class="post-title">
       Git和Repo项目管理
@@ -730,117 +838,6 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
   <div class="tags">
     
     <a href="/tags/#MinIO" title="MinIO">MinIO</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/Maven依赖冲突解决方法/">
-    <h2 class="post-title">
-      Maven依赖冲突解决方法
-    </h2>
-    <h3 class="post-subtitle">
-      Maven依赖冲突解决方法
-    </h3>
-    <div class="post-content-preview">
-      Maven依赖冲突解决方法
-项目的pom.xml形如下：
-项目会引用5.2.7.RELEASE的spring core jar包
-123456789101112131415&lt;dependencies&gt;       &lt;dependency&gt;           &lt;groupId&gt;org.springframework&lt;/groupId&gt;     ......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-04-28
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Maven" title="Maven">Maven</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/关于单例设计模式/">
-    <h2 class="post-title">
-      常见单例模式五种设计方式
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      常见单例模式五种设计方式：
-1.饿汉式（相对于懒汉式）
-饿汉即没有调用getIntance时就已经创建了对象了，因为是静态的被初始化了
-构造方法必须是私有的，除了本类不能调用；
-提供一个静态的成员变量，值为用私有构造出创建的对象；
-提供一个静态的方法getIntance用来返回静态实例，每一次调用该方法都是得到的同一对象
-注意问题：静态块和变量在加载的时候就会执行和初始化，所以像下面的代码，......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-04-17
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#设计模式" title="设计模式">设计模式</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/关于Mybatis二级缓存/">
-    <h2 class="post-title">
-      关于Mybatis二级缓存
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Mybatis中有两级缓存，缓存的目的就是不让每一次数据库查询都到数据库进行，减少数据库的访问与交互，提高了数据的检索效率
-1.一级缓存
-一级缓存是SqlSession级别的一个缓存，也就是用户会话级别的，一个用户都需要创建一个SqlSession来执行，一级缓存也叫本地缓存，mybatis会将查询成功获得的数据缓存到一级缓存中，后续的Sql在命中缓存的情况下，直接从本地缓存读
-2.二级缓存......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-04-12
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#Mybatis" title="Mybatis">Mybatis</a>
     
   </div>
   
@@ -1138,24 +1135,24 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
 <div class="widget">
   <ul>
     
+    <a href="../../undefined/Feign/">
+      <li>Feign</li>
+    </a>
+    
     <a href="../../undefined/IDEA%E4%B9%8BBean%E6%8A%A5%E7%BA%A2%E9%97%AE%E9%A2%98%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%A7%A3%E5%86%B3/">
       <li>IDEA之Bean报红问题的分析与解决</li>
     </a>
     
+    <a href="../../undefined/Cloud%20Alibaba%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%BF%9B%E9%98%B6/">
+      <li>Cloud Alibaba从入门到进阶</li>
+    </a>
+    
+    <a href="../../undefined/Nacos%E5%92%8CRibbon%E5%B0%8F%E8%AE%B0/">
+      <li>Nacos和Ribbon小记</li>
+    </a>
+    
     <a href="../../cn/%E6%99%AF%E5%8C%BA%E6%8A%A2%E7%A5%A8%E5%B9%B3%E5%8F%B0%E7%88%AC%E8%99%AB%E4%BB%A5%E5%8F%8A%E5%AF%B9%E7%BE%8E%E5%9B%A2%E7%9A%84%E7%A0%B4%E8%A7%A3%E6%80%9D%E8%B7%AF/">
       <li>景区抢票平台爬虫以及对美团的破解思路</li>
-    </a>
-    
-    <a href="../../cn/%E5%AF%B9Process%E6%9E%84%E5%BB%BA%E7%9A%84%E6%80%9D%E8%80%83%E5%92%8C%E9%A1%B9%E7%9B%AE%E8%B0%83%E8%AF%95%E4%B8%AD%E7%9A%84%E7%90%86%E8%A7%A3%E4%B8%8E%E9%97%AE%E9%A2%98/">
-      <li>对Process构建的思考和项目调试中的理解与问题</li>
-    </a>
-    
-    <a href="../../cn/%E5%85%B3%E4%BA%8ESpringClassLoader%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">
-      <li>关于SpringClassLoader的一些思考</li>
-    </a>
-    
-    <a href="../../cn/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
-      <li>服务器搭建过程中遇到的数据库问题</li>
     </a>
     
   </ul>
@@ -1186,7 +1183,7 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
