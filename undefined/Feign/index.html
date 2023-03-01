@@ -393,7 +393,7 @@
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Futari on
-              2023-02-21
+              2023-01-08
             </span>
 
 
@@ -401,11 +401,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">4</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">0</span> In Total
+              Words <span class="post-count">1.2k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -467,15 +467,48 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        
+        <h2 id="Feign使用"><a href="#Feign使用" class="headerlink" title="Feign使用"></a>Feign使用</h2><p>原本使用RestTemplate直接发送请求存在以下问题。</p>
+<p><img src="Snipaste_2023-02-21_20-03-45.png" alt="Snipaste_2023-02-21_20-03-45.png"></p>
+<h6 id="使用RestTemplate发送Http请求时产生了上图中的很多问题，所以我们引入了声明式HTTP客户端，也就是声明一个接口，然后制定好服务名和Mapping，一旦在Java代码层面调用了该接口（注入依赖）的方法，那么就会自动产生Http请求，、"><a href="#使用RestTemplate发送Http请求时产生了上图中的很多问题，所以我们引入了声明式HTTP客户端，也就是声明一个接口，然后制定好服务名和Mapping，一旦在Java代码层面调用了该接口（注入依赖）的方法，那么就会自动产生Http请求，、" class="headerlink" title="使用RestTemplate发送Http请求时产生了上图中的很多问题，所以我们引入了声明式HTTP客户端，也就是声明一个接口，然后制定好服务名和Mapping，一旦在Java代码层面调用了该接口（注入依赖）的方法，那么就会自动产生Http请求，、"></a>使用RestTemplate发送Http请求时产生了上图中的很多问题，所以我们引入了声明式HTTP客户端，也就是声明一个接口，然后制定好服务名和Mapping，一旦在Java代码层面调用了该接口（注入依赖）的方法，那么就会自动产生Http请求，、</h6><h6 id="不需要像原来一样使用name属性-服务名-和参数分开的形式，也不需要占位符，实参会直接拼接到Mapping上，别人一看见调用这个方法也很容易知道这个方法的作用。"><a href="#不需要像原来一样使用name属性-服务名-和参数分开的形式，也不需要占位符，实参会直接拼接到Mapping上，别人一看见调用这个方法也很容易知道这个方法的作用。" class="headerlink" title="不需要像原来一样使用name属性(服务名)和参数分开的形式，也不需要占位符，实参会直接拼接到Mapping上，别人一看见调用这个方法也很容易知道这个方法的作用。"></a>不需要像原来一样使用name属性(服务名)和参数分开的形式，也不需要占位符，实参会直接拼接到Mapping上，别人一看见调用这个方法也很容易知道这个方法的作用。</h6><p>最终形式如下：</p>
+<p><img src="Snipaste_2023-02-21_20-11-14.png" alt="Snipaste_2023-02-21_20-11-14.png"></p>
+<h3 id="Feign的组成-源码使用了很多种设计模式"><a href="#Feign的组成-源码使用了很多种设计模式" class="headerlink" title="Feign的组成(源码使用了很多种设计模式)"></a>Feign的组成(源码使用了很多种设计模式)</h3><p><img src="Snipaste_2023-02-21_20-12-44.png" alt="Snipaste_2023-02-21_20-12-44.png"></p>
+<p>可以看到上面第三条提供了注解支持，和MVC的兼容，所以我们可以使用@GetMapping等注解。</p>
+<h3 id="Feign也支持细粒度的配置（日志），方式上同Ribbon"><a href="#Feign也支持细粒度的配置（日志），方式上同Ribbon" class="headerlink" title="Feign也支持细粒度的配置（日志），方式上同Ribbon"></a>Feign也支持细粒度的配置（日志），方式上同Ribbon</h3><p>Feign如何配置日志呢，因为Feign本质上是发送HTTP请求的客户端，我们想要看请求的时间或者加入一些日志看具体细节，Feign的日志级别如下(Spring的日志不能配置，Feign有单独的一套日志程序)。</p>
+<p><img src="Snipaste_2023-02-21_20-24-36.png" alt="Snipaste_2023-02-21_20-24-36.png"></p>
+<h4 id="Java代码配置方式"><a href="#Java代码配置方式" class="headerlink" title="Java代码配置方式"></a>Java代码配置方式</h4><p>和Ribbon类似，也是在@FeignClient注解上配置configuration属性，指定class类</p>
+<p>要加一步在配置文件里将类的全路径设置为debug（<strong>原本我们配置的spring的日志是直接写包路径然后写日志级别，所以这里也能看出单独配置的Feign不在默认日志的监管范围中</strong>）</p>
+<p><strong>和Ribbon相同的是同样会产生上下文重叠，可以把配置类（含有@Bean的类）放到扫描范围外，也可以直接不加@Configuration，相当于不作为配置类加入容器，也就不会产生配置上的上下文重叠，当然如果产生效果和Ribbon一样。</strong></p>
+<h4 id="属性配置方式"><a href="#属性配置方式" class="headerlink" title="属性配置方式"></a>属性配置方式</h4><p><img src="Snipaste_2023-02-21_20-37-07.png" alt="Snipaste_2023-02-21_20-37-07.png"></p>
+<h3 id="Feign的全局配置省略。。。。。"><a href="#Feign的全局配置省略。。。。。" class="headerlink" title="Feign的全局配置省略。。。。。"></a>Feign的全局配置省略。。。。。</h3><h3 id="Feign支持的配置项（仅记录属性配置（方便））"><a href="#Feign支持的配置项（仅记录属性配置（方便））" class="headerlink" title="Feign支持的配置项（仅记录属性配置（方便））"></a>Feign支持的配置项（仅记录属性配置（方便））</h3><p><img src="Snipaste_2023-02-21_20-39-39.png" alt="Snipaste_2023-02-21_20-39-39.png"></p>
+<h3 id="对比总结"><a href="#对比总结" class="headerlink" title="对比总结"></a>对比总结</h3><p><img src="Snipaste_2023-02-21_20-43-26.png" alt="Snipaste_2023-02-21_20-43-26.png"></p>
+<h5 id="记一下Feign配置方式的优先级"><a href="#记一下Feign配置方式的优先级" class="headerlink" title="记一下Feign配置方式的优先级"></a>记一下Feign配置方式的优先级</h5><p><img src="Snipaste_2023-02-21_20-42-24.png" alt="Snipaste_2023-02-21_20-42-24.png"></p>
+<h3 id="Feign的继承了解一下。。。。。。"><a href="#Feign的继承了解一下。。。。。。" class="headerlink" title="Feign的继承了解一下。。。。。。"></a>Feign的继承了解一下。。。。。。</h3><h6 id="官方不推荐，但是业界使用很多，自己选择使用"><a href="#官方不推荐，但是业界使用很多，自己选择使用" class="headerlink" title="官方不推荐，但是业界使用很多，自己选择使用"></a>官方不推荐，但是业界使用很多，自己选择使用</h6><h4 id="多参数请求构造"><a href="#多参数请求构造" class="headerlink" title="多参数请求构造"></a>多参数请求构造</h4><blockquote>
+<p>多参数请求构造其实就是我们在用post或者是get请求的时候，比如说传入Query string或者是请求体</p>
+<p>在解决方式上，我们仍然去兼容springmvc的注解，参数修改为一个固定的json对象，在controller层面去调用我们的一个client的方法，注意controller层面的get请求。不需要加注解，直接写方法就可以了，Get的请求会自动解析，只有Post请求才有请求体</p>
+<p>我们get或者是post在调用Feign时，类似于使用map来进行传入，我们可以用Map接收，但是不建议很麻烦，我们直接新加一个注解@springquerymap，会自动将成的参数加载到我们的实参中</p>
+<p>我们前面使用Feign都是调用了自己的服务，如果我们去调用不在自己Nacos上的服务，也就是底层脱离ribbon，那么我们编写代码的方式如下，注意，此时我们的name只是命名，Name或者是value属性必须有一个，然后再附加一个url属性，指向具体的目标地址</p>
+<p>注意，这里的name不能和我们的微服务地址相同，不然会优先解析成我们的微服务地址，@Getmapping直接设置为空即可</p>
+</blockquote>
+<p><img src="Snipaste_2023-02-22_18-53-45.png" alt="Snipaste_2023-02-22_18-53-45.png"></p>
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p><img src="Snipaste_2023-02-22_20-35-09.png" alt="Snipaste_2023-02-22_20-35-09.png"></p>
+<p><em>虽然在对比上两者各有优势，但是我们仍然推荐使用Feign，而杜绝使用rest template，使用是因为它的一个可读性，并且它的灵活性也足够适用于大部分场景，杜绝使用resttemplate。是因为我们要杜绝在同一个项目中使用多种相同作用的第三方，采用方式要始终统一。</em></p>
+<h3 id="Feign的性能优化"><a href="#Feign的性能优化" class="headerlink" title="Feign的性能优化"></a>Feign的性能优化</h3><h6 id="我们通过查看Feign的组成，发现连接默认使用的是的是urlConnection，他是没有连接池的功能的，所以我们想要使用连接池需要引入其他包的依赖"><a href="#我们通过查看Feign的组成，发现连接默认使用的是的是urlConnection，他是没有连接池的功能的，所以我们想要使用连接池需要引入其他包的依赖" class="headerlink" title="我们通过查看Feign的组成，发现连接默认使用的是的是urlConnection，他是没有连接池的功能的，所以我们想要使用连接池需要引入其他包的依赖"></a>我们通过查看Feign的组成，发现连接默认使用的是的是urlConnection，他是没有连接池的功能的，所以我们想要使用连接池需要引入其他包的依赖</h6><p><strong>我们通过查看Feign的组成，发现连接默认使用的是的是urlConnection，他是没有连接池的功能的，所以我们想要使用连接池需要引入其他包的依赖，比如阿帕奇的HTTPclient，或者okHTTP，引入之后再配置文件中修改如下配置即可，具体的配置参数需要自己进行压测测试来选择最好的参数，也可以自己收集资料</strong></p>
+<p><em>性能优化可以提升15%左右</em></p>
+<p><img src="Snipaste_2023-02-22_20-40-12.png" alt="Snipaste_2023-02-22_20-40-12.png"></p>
+<p><strong>Feign各项问题可以参考手记：<a target="_blank" rel="noopener" href="https://www.imooc.com/article/289005">https://www.imooc.com/article/289005</a></strong></p>
+
 
         <hr>
         <!-- Pager -->
         <ul class="pager">
           
+          <li class="previous">
+            <a href="/undefined/Nacos和Ribbon小记/" data-toggle="tooltip" data-placement="top" title="Nacos和Ribbon小记">&larr; Previous Post</a>
+          </li>
+          
           
           <li class="next">
-            <a href="/undefined/IDEA之Bean报红问题的分析与解决/" data-toggle="tooltip" data-placement="top" title="IDEA之Bean报红问题的分析与解决">Next Post &rarr;</a>
+            <a href="/cn/景区抢票平台爬虫以及对美团的破解思路/" data-toggle="tooltip" data-placement="top" title="景区抢票平台爬虫以及对美团的破解思路">Next Post &rarr;</a>
           </li>
           
         </ul>
@@ -580,7 +613,7 @@
     }
 
     const gitment = new Gitment({
-      id: 'Tue Feb 21 2023 19:03:56 GMT+0800', // optional
+      id: 'Sun Jan 08 2023 19:03:56 GMT+0800', // optional
       owner: 'SFHJavaer',
       repo: 'SFHJavaer',
       oauth: {
@@ -617,7 +650,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Feign%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Feign使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E4%BD%BF%E7%94%A8RestTemplate%E5%8F%91%E9%80%81Http%E8%AF%B7%E6%B1%82%E6%97%B6%E4%BA%A7%E7%94%9F%E4%BA%86%E4%B8%8A%E5%9B%BE%E4%B8%AD%E7%9A%84%E5%BE%88%E5%A4%9A%E9%97%AE%E9%A2%98%EF%BC%8C%E6%89%80%E4%BB%A5%E6%88%91%E4%BB%AC%E5%BC%95%E5%85%A5%E4%BA%86%E5%A3%B0%E6%98%8E%E5%BC%8FHTTP%E5%AE%A2%E6%88%B7%E7%AB%AF%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E5%A3%B0%E6%98%8E%E4%B8%80%E4%B8%AA%E6%8E%A5%E5%8F%A3%EF%BC%8C%E7%84%B6%E5%90%8E%E5%88%B6%E5%AE%9A%E5%A5%BD%E6%9C%8D%E5%8A%A1%E5%90%8D%E5%92%8CMapping%EF%BC%8C%E4%B8%80%E6%97%A6%E5%9C%A8Java%E4%BB%A3%E7%A0%81%E5%B1%82%E9%9D%A2%E8%B0%83%E7%94%A8%E4%BA%86%E8%AF%A5%E6%8E%A5%E5%8F%A3%EF%BC%88%E6%B3%A8%E5%85%A5%E4%BE%9D%E8%B5%96%EF%BC%89%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%8C%E9%82%A3%E4%B9%88%E5%B0%B1%E4%BC%9A%E8%87%AA%E5%8A%A8%E4%BA%A7%E7%94%9FHttp%E8%AF%B7%E6%B1%82%EF%BC%8C%E3%80%81"><span class="toc-nav-number">1.0.0.0.1.</span> <span class="toc-nav-text">使用RestTemplate发送Http请求时产生了上图中的很多问题，所以我们引入了声明式HTTP客户端，也就是声明一个接口，然后制定好服务名和Mapping，一旦在Java代码层面调用了该接口（注入依赖）的方法，那么就会自动产生Http请求，、</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E4%B8%8D%E9%9C%80%E8%A6%81%E5%83%8F%E5%8E%9F%E6%9D%A5%E4%B8%80%E6%A0%B7%E4%BD%BF%E7%94%A8name%E5%B1%9E%E6%80%A7-%E6%9C%8D%E5%8A%A1%E5%90%8D-%E5%92%8C%E5%8F%82%E6%95%B0%E5%88%86%E5%BC%80%E7%9A%84%E5%BD%A2%E5%BC%8F%EF%BC%8C%E4%B9%9F%E4%B8%8D%E9%9C%80%E8%A6%81%E5%8D%A0%E4%BD%8D%E7%AC%A6%EF%BC%8C%E5%AE%9E%E5%8F%82%E4%BC%9A%E7%9B%B4%E6%8E%A5%E6%8B%BC%E6%8E%A5%E5%88%B0Mapping%E4%B8%8A%EF%BC%8C%E5%88%AB%E4%BA%BA%E4%B8%80%E7%9C%8B%E8%A7%81%E8%B0%83%E7%94%A8%E8%BF%99%E4%B8%AA%E6%96%B9%E6%B3%95%E4%B9%9F%E5%BE%88%E5%AE%B9%E6%98%93%E7%9F%A5%E9%81%93%E8%BF%99%E4%B8%AA%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8%E3%80%82"><span class="toc-nav-number">1.0.0.0.2.</span> <span class="toc-nav-text">不需要像原来一样使用name属性(服务名)和参数分开的形式，也不需要占位符，实参会直接拼接到Mapping上，别人一看见调用这个方法也很容易知道这个方法的作用。</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Feign%E7%9A%84%E7%BB%84%E6%88%90-%E6%BA%90%E7%A0%81%E4%BD%BF%E7%94%A8%E4%BA%86%E5%BE%88%E5%A4%9A%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Feign的组成(源码使用了很多种设计模式)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Feign%E4%B9%9F%E6%94%AF%E6%8C%81%E7%BB%86%E7%B2%92%E5%BA%A6%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%88%E6%97%A5%E5%BF%97%EF%BC%89%EF%BC%8C%E6%96%B9%E5%BC%8F%E4%B8%8A%E5%90%8CRibbon"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Feign也支持细粒度的配置（日志），方式上同Ribbon</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Java%E4%BB%A3%E7%A0%81%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.2.1.</span> <span class="toc-nav-text">Java代码配置方式</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F"><span class="toc-nav-number">1.2.2.</span> <span class="toc-nav-text">属性配置方式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Feign%E7%9A%84%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E7%9C%81%E7%95%A5%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">Feign的全局配置省略。。。。。</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Feign%E6%94%AF%E6%8C%81%E7%9A%84%E9%85%8D%E7%BD%AE%E9%A1%B9%EF%BC%88%E4%BB%85%E8%AE%B0%E5%BD%95%E5%B1%9E%E6%80%A7%E9%85%8D%E7%BD%AE%EF%BC%88%E6%96%B9%E4%BE%BF%EF%BC%89%EF%BC%89"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">Feign支持的配置项（仅记录属性配置（方便））</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E6%AF%94%E6%80%BB%E7%BB%93"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">对比总结</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#%E8%AE%B0%E4%B8%80%E4%B8%8BFeign%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7"><span class="toc-nav-number">1.5.0.1.</span> <span class="toc-nav-text">记一下Feign配置方式的优先级</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Feign%E7%9A%84%E7%BB%A7%E6%89%BF%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8B%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82%E3%80%82"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">Feign的继承了解一下。。。。。。</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%AE%98%E6%96%B9%E4%B8%8D%E6%8E%A8%E8%8D%90%EF%BC%8C%E4%BD%86%E6%98%AF%E4%B8%9A%E7%95%8C%E4%BD%BF%E7%94%A8%E5%BE%88%E5%A4%9A%EF%BC%8C%E8%87%AA%E5%B7%B1%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8"><span class="toc-nav-number">1.6.0.0.1.</span> <span class="toc-nav-text">官方不推荐，但是业界使用很多，自己选择使用</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%A4%9A%E5%8F%82%E6%95%B0%E8%AF%B7%E6%B1%82%E6%9E%84%E9%80%A0"><span class="toc-nav-number">1.6.1.</span> <span class="toc-nav-text">多参数请求构造</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%AF%B9%E6%AF%94"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">对比</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Feign%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">Feign的性能优化</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E6%88%91%E4%BB%AC%E9%80%9A%E8%BF%87%E6%9F%A5%E7%9C%8BFeign%E7%9A%84%E7%BB%84%E6%88%90%EF%BC%8C%E5%8F%91%E7%8E%B0%E8%BF%9E%E6%8E%A5%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AF%E7%9A%84%E6%98%AFurlConnection%EF%BC%8C%E4%BB%96%E6%98%AF%E6%B2%A1%E6%9C%89%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%9A%84%E5%8A%9F%E8%83%BD%E7%9A%84%EF%BC%8C%E6%89%80%E4%BB%A5%E6%88%91%E4%BB%AC%E6%83%B3%E8%A6%81%E4%BD%BF%E7%94%A8%E8%BF%9E%E6%8E%A5%E6%B1%A0%E9%9C%80%E8%A6%81%E5%BC%95%E5%85%A5%E5%85%B6%E4%BB%96%E5%8C%85%E7%9A%84%E4%BE%9D%E8%B5%96"><span class="toc-nav-number">1.8.0.0.1.</span> <span class="toc-nav-text">我们通过查看Feign的组成，发现连接默认使用的是的是urlConnection，他是没有连接池的功能的，所以我们想要使用连接池需要引入其他包的依赖</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
         
         </div>
       </aside>

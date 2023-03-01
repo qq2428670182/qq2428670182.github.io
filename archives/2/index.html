@@ -477,6 +477,80 @@
   <!-- top end -->
   
 
+  <a href="/cn/贪心和动态规划/">
+    <h2 class="post-title">
+      贪心与动态规划
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      贪心例题：跳跃游戏
+题干：    给定一个非负整数数组，假定你的初始位置为数组第一个下标，数组中的每个元素代表你在那个位置能够跳跃的最大长度，请确认你是否能够跳跃到数组的最后一个下标。
+
+从起点开始选择第二个，并不是说第一步跳就选最远的，而是寻找一种一定能满足的关系，就像数学归纳法一样，每一步的贪心都能保证最终的结果，所以只有都满足递推关系了才进行贪心。
+所以第一步选最远的那个只是保证了起点......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2022-08-03
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#贪心 动态规划" title="贪心 动态规划">贪心 动态规划</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/cn/算法模板：BFS和DFS问题/">
+    <h2 class="post-title">
+      算法模板：BFS和DFS问题
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      BFS和DFS问题
+广度优先遍历是利用队列实现的搜索算法，一层一层的进行递归，典型例题是之字形遍历树和树的层序遍历以及前中后序遍历
+BFS的关键是队列，而DFS的关键是递归（也就是隐式的栈），回溯可以理解成是DFS的一种应用，只要是不撞南墙不回头都是DFS。
+应用上：
+123BFS 常用于找单一的最短路线，它的特点是 &quot;搜到就是最优解&quot;而 DFS 用于找所有解的问题，它的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by SFHJavaer on
+    2022-07-21
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#BFS" title="BFS">BFS</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
   <a href="/cn/Docker与微服务/">
     <h2 class="post-title">
       Docker与微服务小记
@@ -759,85 +833,6 @@ Ps：只有.git目录以及他的下层目录才能代表这是一个git的仓�
   <div class="tags">
     
     <a href="/tags/#滑动窗口" title="滑动窗口">滑动窗口</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/操作系统上的进程与线程/">
-    <h2 class="post-title">
-      操作系统上的进程与线程
-    </h2>
-    <h3 class="post-subtitle">
-      操作系统上的进程与线程
-    </h3>
-    <div class="post-content-preview">
-      进程控制块：英文缩写PCB
-PCB是一块内存空间，里面记录了操作系统所需要的、描述进程状态的、以及控制进程运行的所有信息。
-作用：
-PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运行的程序，成为一个可以独立运行的单位，我们也叫做一个进程，OS根据PCB对并发执行的进程进行控制和管理，包括进程同步，通信，访问文件，进程状态（暂停等）。系统创建进程时，随之创建一个PCB，进程结束时回......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-05-19
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#操作系统" title="操作系统">操作系统</a>
-    
-  </div>
-  
-
-</div>
-<hr>
-
-<div class="post-preview">
-  
-  <!-- top start (article top hot config) -->
-  
-  <!-- top end -->
-  
-
-  <a href="/cn/服务器搭建MinIo环境/">
-    <h2 class="post-title">
-      Linux手动搭建MinIo分布式存储步骤
-    </h2>
-    <h3 class="post-subtitle">
-      
-    </h3>
-    <div class="post-content-preview">
-      Linux搭建MinIo环境详细步骤
-
-1.去minIO官网下载安装包，或者使用wget直接进行下载,选择自己合适的版本
-
-1wget https://dl.min.io/server/minio/release/linux-amd64/minio
-
-2.给minio文件赋予可执行的权限
-
-1chomd +x minio
-
-3.启动minio server端（后面的路径指定具体的文件存储目录......
-    </div>
-  </a>
-  
-  <p class="post-meta" style="margin: 10px 0;">
-    Posted by SFHJavaer on
-    2022-05-06
-  </p>
-  <div class="tags">
-    
-    <a href="/tags/#MinIO" title="MinIO">MinIO</a>
     
   </div>
   
@@ -1135,8 +1130,12 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
 <div class="widget">
   <ul>
     
-    <a href="../../undefined/Feign/">
-      <li>Feign</li>
+    <a href="../../undefined/Rocket/">
+      <li>Rocket</li>
+    </a>
+    
+    <a href="../../undefined/Sentinel/">
+      <li>Sentinel</li>
     </a>
     
     <a href="../../undefined/IDEA%E4%B9%8BBean%E6%8A%A5%E7%BA%A2%E9%97%AE%E9%A2%98%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%A7%A3%E5%86%B3/">
@@ -1149,10 +1148,6 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
     
     <a href="../../undefined/Nacos%E5%92%8CRibbon%E5%B0%8F%E8%AE%B0/">
       <li>Nacos和Ribbon小记</li>
-    </a>
-    
-    <a href="../../cn/%E6%99%AF%E5%8C%BA%E6%8A%A2%E7%A5%A8%E5%B9%B3%E5%8F%B0%E7%88%AC%E8%99%AB%E4%BB%A5%E5%8F%8A%E5%AF%B9%E7%BE%8E%E5%9B%A2%E7%9A%84%E7%A0%B4%E8%A7%A3%E6%80%9D%E8%B7%AF/">
-      <li>景区抢票平台爬虫以及对美团的破解思路</li>
     </a>
     
   </ul>
@@ -1183,7 +1178,7 @@ PCB中有进程所有信息，他的作用就是能让OS中原本不能独立运
 
 <h5><a href="/archives/">archives</a></h5>
 <div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../2023/03/">March 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/02/">February 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2023/01/">January 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/12/">December 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/08/">August 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/07/">July 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/06/">June 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/05/">May 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/04/">April 2022</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/03/">March 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/02/">February 2022</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2022/01/">January 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/12/">December 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/11/">November 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/10/">October 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2021/03/">March 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/08/">August 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../2020/07/">July 2020</a><span class="archive-list-count">1</span></li></ul>
 </div>
 
 
