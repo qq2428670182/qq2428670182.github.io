@@ -407,7 +407,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">1.3k</span> In Total
+              Words <span class="post-count">1.5k</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -496,6 +496,14 @@
 <p>final不能修饰接口，因为接口需要被实现，也不能修饰抽象类，因为抽象类需要被继承，final修饰的方法可以被重载，但是可以被重写，重载的关联比较小，而重写关联大，不可重写</p>
 <p>在JDK8之前，接口中的方法都是没有方法体的方法，都需要实现类去实现所有的方法</p>
 <p>在1.8之后，出现了default方法，就可以在接口中书写方法体，注意default方法在接口的实现类中可以不被（重写）实现，实现类当然会继承default方法，当然如果一个类实现了多个接口，其中有重复的default方法，那么此时就需要去重写，统一使用重写后的方法，不然不知道到底该使用哪一个接口的default方法</p>
+<h4 id="JDK8-Date新特性">JDK8   Date新特性</h4>
+<p>SimpleDateFormatter被更新为DateTimeFormatter，采用了ISO 8061标准的日期格式化输出，可以使用of接收参数或者parse直接解析转化。</p>
+<h6 id="同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime">同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime</h6>
+<p>三者可以使用toxxx()转换，拼接成DateTime类底层是通过DateTime的构造方法new出来对象的。</p>
+<p>日期类可以使用plusxxxx()和minusXXXX()进行年月日的加减操作，当然调整之后不符合时间规范会报错或者自动优化为符合时间。</p>
+<p><strong>配合类：</strong></p>
+<h6 id="Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。">Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。</h6>
+<h6 id="Peroid类代表时间间隔，使用a-util-b-取间隔。">Peroid类代表时间间隔，使用a.util(b)取间隔。</h6>
 
 
         <hr>
@@ -646,7 +654,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">目录</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-IO%E6%B5%81"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Java IO流</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-InputStream%E5%AD%97%E8%8A%82%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-nav-number">1.0.0.1.</span> <span class="toc-nav-text">java.io.InputStream				字节输入流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-OutputStream%E5%AD%97%E8%8A%82%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-nav-number">1.0.0.2.</span> <span class="toc-nav-text">java.io.OutputStream				字节输出流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-Reader-%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-nav-number">1.0.0.3.</span> <span class="toc-nav-text">java.io.Reader 				字符输入流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-Writer%E5%AD%97%E7%AC%A6%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-nav-number">1.0.0.4.</span> <span class="toc-nav-text">java.io.Writer					字符输出流</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%EF%BC%9A"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">集合类：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">Java基础知识</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Java-IO%E6%B5%81"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Java IO流</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-InputStream%E5%AD%97%E8%8A%82%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-nav-number">1.0.0.1.</span> <span class="toc-nav-text">java.io.InputStream				字节输入流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-OutputStream%E5%AD%97%E8%8A%82%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-nav-number">1.0.0.2.</span> <span class="toc-nav-text">java.io.OutputStream				字节输出流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-Reader-%E5%AD%97%E7%AC%A6%E8%BE%93%E5%85%A5%E6%B5%81"><span class="toc-nav-number">1.0.0.3.</span> <span class="toc-nav-text">java.io.Reader 				字符输入流</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#java-io-Writer%E5%AD%97%E7%AC%A6%E8%BE%93%E5%87%BA%E6%B5%81"><span class="toc-nav-number">1.0.0.4.</span> <span class="toc-nav-text">java.io.Writer					字符输出流</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%9B%86%E5%90%88%E7%B1%BB%EF%BC%9A"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">集合类：</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">Java基础知识</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#JDK8-Date%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">JDK8   Date新特性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#%E5%90%8C%E6%97%B6%E5%BC%95%E5%85%A5%E4%BA%86%E6%96%B0%E7%9A%84%E6%9C%AC%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E7%B1%BB%EF%BC%8CLocalDate%E6%88%96%E8%80%85LocalTime%E6%88%96%E8%80%85LocalDateTime"><span class="toc-nav-number">1.1.2.0.1.</span> <span class="toc-nav-text">同时引入了新的本地日期时间类，LocalDate或者LocalTime或者LocalDateTime</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Duiaton%E7%B1%BB%E4%BB%A3%E8%A1%A8%E6%97%A5%E6%9C%9F%E4%B9%8B%E9%97%B4%E7%9A%84%E9%97%B4%E9%9A%94%EF%BC%8C%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95between%E5%8F%96%E9%97%B4%E9%9A%94%E3%80%82"><span class="toc-nav-number">1.1.2.0.2.</span> <span class="toc-nav-text">Duiaton类代表日期之间的间隔，一般使用静态方法between取间隔。</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#Peroid%E7%B1%BB%E4%BB%A3%E8%A1%A8%E6%97%B6%E9%97%B4%E9%97%B4%E9%9A%94%EF%BC%8C%E4%BD%BF%E7%94%A8a-util-b-%E5%8F%96%E9%97%B4%E9%9A%94%E3%80%82"><span class="toc-nav-number">1.1.2.0.3.</span> <span class="toc-nav-text">Peroid类代表时间间隔，使用a.util(b)取间隔。</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
         
         </div>
       </aside>

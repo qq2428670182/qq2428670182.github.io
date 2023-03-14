@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.sfhjavaer.tech/undefined/uni-app/</loc>
+    <lastmod>2023-03-07</lastmod>
+  </url>
+  <url>
     <loc>http://www.sfhjavaer.tech/undefined/Rocket/</loc>
     <lastmod>2023-03-01</lastmod>
   </url>
@@ -61,7 +65,7 @@
     <lastmod>2022-07-03</lastmod>
   </url>
   <url>
-    <loc>http://www.sfhjavaer.tech/cn/Git%E5%92%8CRepo%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
+    <loc>http://www.sfhjavaer.tech/undefined/Git%E5%92%8CRepo%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2022-07-02</lastmod>
   </url>
   <url>
